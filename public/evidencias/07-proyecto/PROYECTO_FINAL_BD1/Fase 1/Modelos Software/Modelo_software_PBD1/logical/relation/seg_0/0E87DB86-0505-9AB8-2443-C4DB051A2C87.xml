@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tratar" directorySegmentName="seg_0" id="0E87DB86-0505-9AB8-2443-C4DB051A2C87">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:03:52 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>04358ACC-7F4A-4788-6FD6-9EC93B2C53C3</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>99E5F8BE-DD6E-0530-4EAC-D0139F2B128E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>529E8DDD-F91C-8D72-25E0-292B6F01ACC8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

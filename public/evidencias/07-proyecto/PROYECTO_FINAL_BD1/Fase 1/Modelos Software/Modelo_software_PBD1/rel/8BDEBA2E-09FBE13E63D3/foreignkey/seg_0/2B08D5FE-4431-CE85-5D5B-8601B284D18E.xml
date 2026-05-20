@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2B08D5FE-4431-CE85-5D5B-8601B284D18E" containerWithKeyObject="F0468104-5643-BFBE-30E0-12E69EDF6464" localFKIndex="3C2268C5-FBA7-4F61-7F01-EFFA94DE4BAA" name="Asistir_CLASE_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>93DCCD11-F39D-8143-B51E-C7BF17309AAA</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>CLASE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>71867169-982C-D765-6F6D-7EBF6DA018C4</referredTableID>
+<keyObject>DFD039FC-1A92-77CC-D477-B238852AFF90</keyObject>
+<referredKeyID>DFD039FC-1A92-77CC-D477-B238852AFF90</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_clase,Sala_id_sala,Horario_id_horario</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

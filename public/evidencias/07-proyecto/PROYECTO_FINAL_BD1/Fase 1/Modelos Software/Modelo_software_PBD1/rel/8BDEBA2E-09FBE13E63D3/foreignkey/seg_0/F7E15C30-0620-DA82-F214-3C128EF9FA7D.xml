@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F7E15C30-0620-DA82-F214-3C128EF9FA7D" containerWithKeyObject="0B7C4336-9681-C74E-C5A9-2193B748EFA8" localFKIndex="D9585CB3-BA68-ACB2-3DDE-14E8193B11D8" name="Mantenimiento_MAQUINAS_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>32A83E71-33E9-0764-8105-D2CE83C9171D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>MAQUINAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4A40EB43-30CB-BCD7-C48B-3E8A7EC41B3D</referredTableID>
+<keyObject>B71A1E4F-A465-9DBB-096B-2E67CE0C5931</keyObject>
+<referredKeyID>B71A1E4F-A465-9DBB-096B-2E67CE0C5931</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>codigo_serie</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

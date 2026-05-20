@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tener" directorySegmentName="seg_0" id="740C1306-C0C7-C4F4-1E56-22BC46153A28">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:50:22 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>C334276D-E254-19F8-C469-49D536151974</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1D6D3523-E8A2-475A-43B5-A730D586E998</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B140FAC4-06DB-D4C8-E08D-FCF4FE8DB09E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="id_membresia" id="C575B5ED-FF60-7E00-353E-478E6EA3518D">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:51:24 UTC</createdTime>
+<comment><![CDATA[identificador de la membresia]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="fecha_inicio" id="8985E0B4-0D69-40E1-30B6-2283939EF1B5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:52:53 UTC</createdTime>
+<comment><![CDATA[fecha de inicio de la membresia con el gym en un plan]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="fecha_fin" id="B7662F25-46A8-982E-B6D5-40157E18EAEF">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:53:38 UTC</createdTime>
+<comment><![CDATA[fecha final de la membrecia con el gym en ese plan]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="estado" id="AD3F8FF5-B948-E4F8-9DD9-BF9E8CA4CFD3">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:54:23 UTC</createdTime>
+<comment><![CDATA[estado de la membrecia(activa,vencida)]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

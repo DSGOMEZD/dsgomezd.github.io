@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C73218E0-8C30-3E7B-F7FD-CDCF139C1911" name="PERSONA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:00:54 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cedula" id="87B953EF-5174-FF18-0D30-353E38FCE4CC">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:01:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[documento de identidad de la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="256CFB82-9BBD-2706-C8B9-74E7000E50D0">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:02:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[numero telefonico de la persona, guarda signos y demas]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="C169E23C-4A1A-4E12-2657-ACAF0EE74C8B">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:03:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[correo personal de la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_nombre" id="999FA2B4-A594-2B75-5DC2-59C7FA9DB1E8">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:05:10 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_nombre" id="E2606A32-D645-0DC4-AB46-DC1A20890494">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:25:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[segundo nombre de la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="primer_apellido" id="3E478F63-756F-10F6-EEAB-A37CEF164160">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:26:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[primer apellido de la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="segundo_apellido" id="E2F0A914-AAF3-C720-C5BF-90D14B755834">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:38:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[segundo apellido de la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nacimiento" id="D4CC260D-60D2-E2C3-05EB-B9E713A8F8F5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:05:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha en la que nacio la persona]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C334276D-E254-19F8-C469-49D536151974" name="PERSONA PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:02:16 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87B953EF-5174-FF18-0D30-353E38FCE4CC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

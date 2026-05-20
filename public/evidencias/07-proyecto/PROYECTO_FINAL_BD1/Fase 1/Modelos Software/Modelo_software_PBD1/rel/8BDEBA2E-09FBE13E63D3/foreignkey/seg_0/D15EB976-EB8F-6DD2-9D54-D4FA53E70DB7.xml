@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D15EB976-EB8F-6DD2-9D54-D4FA53E70DB7" containerWithKeyObject="6A0F03DE-A9C0-8732-A1AC-B3D61917F140" localFKIndex="C49ADE06-B285-121D-3640-509E6F8639E0" name="Especializar_DEPORTE_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>A6DB9C62-4BF5-7BF9-793D-91FB90619110</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>DEPORTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8248D9C9-A541-139E-1B88-BF7A675EA53A</referredTableID>
+<keyObject>520A511B-55D1-4282-8DAE-B972B88F958B</keyObject>
+<referredKeyID>520A511B-55D1-4282-8DAE-B972B88F958B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_deporte</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

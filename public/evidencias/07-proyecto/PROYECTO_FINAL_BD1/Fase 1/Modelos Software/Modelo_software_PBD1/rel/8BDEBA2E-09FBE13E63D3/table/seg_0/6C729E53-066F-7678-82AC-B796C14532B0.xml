@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6C729E53-066F-7678-82AC-B796C14532B0" name="PERSONA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>C73218E0-8C30-3E7B-F7FD-CDCF139C1911</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="B931F3C7-FDF8-2C69-4D2B-EFE00B0D3608">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[documento de identidad de la persona]]></commentInRDBMS>
+<generatorID>87B953EF-5174-FF18-0D30-353E38FCE4CC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="48C87CCE-EB85-9CC1-58E5-A87368506A3F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[numero telefonico de la persona, guarda signos y demas]]></commentInRDBMS>
+<generatorID>256CFB82-9BBD-2706-C8B9-74E7000E50D0</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="65BF1CC0-DBDF-6C00-07A4-E7E05A761FAF">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[correo personal de la persona]]></commentInRDBMS>
+<generatorID>C169E23C-4A1A-4E12-2657-ACAF0EE74C8B</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="primer_nombre" id="46A4F1DC-BF45-C4E8-432A-7CDC36CBC770">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>999FA2B4-A594-2B75-5DC2-59C7FA9DB1E8</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="segundo_nombre" id="B5EC0C75-EA5F-F762-F172-A67EE53E7BEE">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[segundo nombre de la persona]]></commentInRDBMS>
+<generatorID>E2606A32-D645-0DC4-AB46-DC1A20890494</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="primer_apellido" id="90D54470-457A-BC39-F85C-9DF256EFB46E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[primer apellido de la persona]]></commentInRDBMS>
+<generatorID>3E478F63-756F-10F6-EEAB-A37CEF164160</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="segundo_apellido" id="69D6C725-FA64-D613-B312-7FDA48B7A9F0">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[segundo apellido de la persona]]></commentInRDBMS>
+<generatorID>E2F0A914-AAF3-C720-C5BF-90D14B755834</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nacimiento" id="6DD8111A-79C4-0BD4-D8E8-269123E4A7C2">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha en la que nacio la persona]]></commentInRDBMS>
+<generatorID>D4CC260D-60D2-E2C3-05EB-B9E713A8F8F5</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B39F8AA-6591-0B55-2E27-DE7E92234834" name="PERSONA_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>C334276D-E254-19F8-C469-49D536151974</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B931F3C7-FDF8-2C69-4D2B-EFE00B0D3608"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

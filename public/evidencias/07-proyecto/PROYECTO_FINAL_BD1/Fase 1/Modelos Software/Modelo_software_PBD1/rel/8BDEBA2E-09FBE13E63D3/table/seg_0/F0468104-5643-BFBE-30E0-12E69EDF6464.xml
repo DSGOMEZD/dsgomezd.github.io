@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0468104-5643-BFBE-30E0-12E69EDF6464" name="Asistir">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MIEMBRO_cedula" id="FCEFC475-8687-DEF3-19A0-E6EBF1FE591E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1BA9E06A-49B5-ED61-F784-B5C199C662B9" referredColumn="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</associations>
+</Column>
+<Column name="CLASE_id_clase" id="62F969C8-7B40-DEED-9B81-F9884F65616C">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B08D5FE-4431-CE85-5D5B-8601B284D18E" referredColumn="6F95CE0D-15D4-D24A-C6D0-3FFDD00FCB1D"/>
+</associations>
+</Column>
+<Column name="CLASE_id_sala" id="A50383D9-E477-D1EC-C4F5-D467BCB2B89A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B08D5FE-4431-CE85-5D5B-8601B284D18E" referredColumn="C292690E-B761-0156-C6B5-701D36B75043"/>
+</associations>
+</Column>
+<Column name="CLASE_id_horario" id="783EB88C-97BB-8504-8CE8-44606F93F4DB">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B08D5FE-4431-CE85-5D5B-8601B284D18E" referredColumn="09C477DB-7867-8F3A-18B8-66E9A1F03051"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="56D7F8E7-B35F-0353-3934-8792D998D2F6" name="Asistir_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCEFC475-8687-DEF3-19A0-E6EBF1FE591E"/>
+<colUsage columnID="62F969C8-7B40-DEED-9B81-F9884F65616C"/>
+<colUsage columnID="A50383D9-E477-D1EC-C4F5-D467BCB2B89A"/>
+<colUsage columnID="783EB88C-97BB-8504-8CE8-44606F93F4DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9F012F2-7099-59A3-AD3B-9CC7E2E543E7" name="Asistir_MIEMBRO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>93DCCD11-F39D-8143-B51E-C7BF17309AAA</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCEFC475-8687-DEF3-19A0-E6EBF1FE591E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3C2268C5-FBA7-4F61-7F01-EFFA94DE4BAA" name="Asistir_CLASE_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>93DCCD11-F39D-8143-B51E-C7BF17309AAA</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62F969C8-7B40-DEED-9B81-F9884F65616C"/>
+<colUsage columnID="A50383D9-E477-D1EC-C4F5-D467BCB2B89A"/>
+<colUsage columnID="783EB88C-97BB-8504-8CE8-44606F93F4DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

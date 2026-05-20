@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Usarv2" directorySegmentName="seg_0" id="44D0FCDC-E900-9451-B6AC-83E1E2BF8BA9">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:53:57 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>6776652F-F2E5-781D-9F7D-2B5EB84C2019</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CE856E0A-D7EF-E5E9-7D1B-24196BE715F0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>529E8DDD-F91C-8D72-25E0-292B6F01ACC8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

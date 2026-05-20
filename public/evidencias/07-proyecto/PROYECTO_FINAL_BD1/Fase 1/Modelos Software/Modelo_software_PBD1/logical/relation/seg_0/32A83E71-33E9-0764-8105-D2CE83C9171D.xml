@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Mantenimiento" directorySegmentName="seg_0" id="32A83E71-33E9-0764-8105-D2CE83C9171D">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:26:04 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>62DB60CC-B112-D949-1D74-BD7A1D2BB286</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DBE76704-9DE6-7C8C-0531-BFEB4ABECF60</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="tipo_mant" id="2ECCA3F8-2F94-10BF-2253-7CAFE7697A28">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:35:01 UTC</createdTime>
+<comment><![CDATA[tipo de mantenimiento que el operario le realzara a la maquina]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</attribute>
+<attribute name="fecha_mantenimiento" id="F6C793C6-FAEF-B76C-D30E-1F61911F5524">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:36:01 UTC</createdTime>
+<comment><![CDATA[fecha y hora a la que se hizo el mantenimiento a la maquina]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="descripcion_mant" id="41DF7678-5C61-B971-292A-0F7CF6B76A87">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:36:35 UTC</createdTime>
+<comment><![CDATA[descripcion detallada de lo que se hizo en el mantenimiento]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E5CCA9DC-70C4-011D-D03F-67DD2FED1696" name="EJERCICIO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 08:00:05 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="descripcion_ejerc" id="8E044AFA-3F14-42E6-DF6B-18D1A71937B5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 08:00:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[descripcion de lo que hay que hacer en el ejercicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_ejercicio" id="B97D727D-8611-252A-F225-A8D80A3710A7">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 08:02:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador del ejercicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_ejerc" id="304A6D91-FC19-217D-60F2-4C6C83D6A78C">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 08:02:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[nombre del ejercicio]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="D5A39AE6-ACE1-F787-C1B4-9C5B15E1FCC2">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:42:56 UTC</createdTime>
+<generatorID>AE899766-4533-6946-2855-8A6FB9F75F49</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>41489710-29D6-4AB1-3D25-3D4AAB3567BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EAA0C5D4-965F-103C-C476-C31FD85609DE" name="EJERCICIO PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 08:02:17 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B97D727D-8611-252A-F225-A8D80A3710A7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

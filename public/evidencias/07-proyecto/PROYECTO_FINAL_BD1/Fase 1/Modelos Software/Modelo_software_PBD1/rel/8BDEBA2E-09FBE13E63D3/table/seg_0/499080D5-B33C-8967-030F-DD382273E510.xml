@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="499080D5-B33C-8967-030F-DD382273E510" name="PAGO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>74DE1522-A6FA-7BE6-F449-6EA8B142BDAE</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pago" id="D81D686B-B4DB-2D80-983B-87AC6565D037">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador del pago]]></commentInRDBMS>
+<generatorID>402CADA3-0A07-9151-1F82-E53D9E28922A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="metodo_pago" id="7E537BBD-D5E6-F84A-2090-5CA01EC87C3F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[metodo por el que se realizo el pago(efectivo,tarjeta,transaccion)]]></commentInRDBMS>
+<generatorID>E2C54F7D-FCBD-B0CD-3E2E-EF4E38FC6507</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_pago" id="CDD7FE8E-B290-2D6E-DC4E-002F1052A41E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[fehca en la que se realizo el pago]]></commentInRDBMS>
+<generatorID>4C695EC2-1602-4D6F-0536-D6EC7F688952</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="valor_pagado" id="AE29A94C-8EE2-195A-A049-A13BCEB5FF05">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[valor pagado para la membresia]]></commentInRDBMS>
+<generatorID>B901FDE3-B00E-F623-A82F-C731E0ECDC9B</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MEMBRESIA_cedula" id="DD105CAD-1E8B-3626-F2F9-153D81651647">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>5BC78741-27A1-42DE-6C7B-94019DD5C729</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FB21985-79D6-492C-6654-2543A88BEFCD" referredColumn="B4944085-2319-81DC-029E-4A16B153DEE7"/>
+</associations>
+</Column>
+<Column name="MEMBRESIA_PLAN_id_plan" id="2C7E2856-CAC0-2F7A-C01D-6679E50AAA1F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>0D6FA851-721D-2E06-7C66-779554DDD776</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FB21985-79D6-492C-6654-2543A88BEFCD" referredColumn="1020D5E1-89FD-B859-CEBB-A671101993E8"/>
+</associations>
+</Column>
+<Column name="MEMBRESIA_fecha_inicio" id="BB206B34-4B62-88FA-EF7B-634A574652E6">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>E0EAC0B0-90AE-2FD8-7C43-BE04EF875DD3</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FB21985-79D6-492C-6654-2543A88BEFCD" referredColumn="6AC101F2-A7BA-5D67-199F-5140A313C336"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B40ADAD5-D5BD-0240-0691-83A40235487E" name="PAGO_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>044398EF-195A-B398-5E0F-5B70577D5B4F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D81D686B-B4DB-2D80-983B-87AC6565D037"/>
+<colUsage columnID="DD105CAD-1E8B-3626-F2F9-153D81651647"/>
+<colUsage columnID="2C7E2856-CAC0-2F7A-C01D-6679E50AAA1F"/>
+<colUsage columnID="BB206B34-4B62-88FA-EF7B-634A574652E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6EF9348-3F82-E618-D0B4-68DAEA3E2697" name="PAGO_MEMBRESIA_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>47DAD24E-D619-F3D4-901D-39A9D7DAA71F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD105CAD-1E8B-3626-F2F9-153D81651647"/>
+<colUsage columnID="2C7E2856-CAC0-2F7A-C01D-6679E50AAA1F"/>
+<colUsage columnID="BB206B34-4B62-88FA-EF7B-634A574652E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

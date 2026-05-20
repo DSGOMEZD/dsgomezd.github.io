@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Modelo_software_PBD1" id="9809C31A-AE88-6FE7-F070-D89EAAF2CA89" version="3.5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 05:00:36 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9809C31A-AE88-6FE7-F070-D89EAAF2CA89</designId>
+</OSDM_Design>

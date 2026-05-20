@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Asignar" directorySegmentName="seg_0" id="223E768B-E2AF-CCCA-72C7-9C4DCABADF73">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:29:10 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>5513CCED-51A0-BFAC-ABB9-55BD61C13AAE</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8E859152-3791-063E-867C-D89D40EB383D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AE50D60B-31B8-93B3-9FAC-CEC66F9AAF50</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

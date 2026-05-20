@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B9888DC-FB5C-19F9-3113-48BD7FAE63BD" name="PLAN_ENTRENAMIENTO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>AE50D60B-31B8-93B3-9FAC-CEC66F9AAF50</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="descripcion" id="D75E4082-9AFA-1A56-73A2-145FC4BBF7AD">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[descripcion del plan que el entrenador le asigna a la persona]]></commentInRDBMS>
+<generatorID>B27E9DEE-6DAC-A19F-A7EA-1B2520492AC5</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIEMBRO_cedula" id="ACA73329-F55C-D6E0-929F-AF7BB89341CA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>41489710-29D6-4AB1-3D25-3D4AAB3567BD</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B72B76F4-9E87-A12D-B88E-EBF7963B8865" referredColumn="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="353FCD71-0ADD-16AE-627C-B62B9C35EBDF" name="PLAN_ENTRENAMIENTO_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>7EEFE781-8585-5561-15FA-721AC1285C06</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACA73329-F55C-D6E0-929F-AF7BB89341CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="63746A77-D89C-22E8-0524-0460AF78F0DB" name="PLAN_ENTRENAMIENTO_ENTRENADOR_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>223E768B-E2AF-CCCA-72C7-9C4DCABADF73</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="49EC4978-3B65-C184-E846-F392F238EBC2" name="PLAN_ENTRENAMIENTO_MIEMBRO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>13148C3E-CFFB-118D-ADBD-985F7197430F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACA73329-F55C-D6E0-929F-AF7BB89341CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

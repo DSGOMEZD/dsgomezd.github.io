@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7302B01F-BCB5-DFB9-7D37-A1060BB34BFF" name="Restriccion_medica">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>5ACFF67B-59E0-7B17-2890-B1821479E18B</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_restriccion" id="954112C1-3C54-342F-5E34-BF6FFF776587">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador de la restriccion]]></commentInRDBMS>
+<generatorID>6BFD4760-C3E4-48FC-2AA0-82628EFD461D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="ABEB5CA1-6E99-C32E-0BC9-E1D2DD70004A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[tipo de restriccion(lesion,enfermedad,limitacion, etc)]]></commentInRDBMS>
+<generatorID>E91FED18-6094-FB0E-794B-609DEB269787</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="9DCFD38E-3ADD-2755-865B-78A5C34F4515">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[descripcion de la restriccion asosciada a un paciente]]></commentInRDBMS>
+<generatorID>41D02141-EFD3-4202-2A82-4909FCAABD7A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_gravedad" id="85746C67-0C01-354D-AAD7-2257A5AACF6D">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[nivel de gravedad de la restriccion(leve,moderado,alto)]]></commentInRDBMS>
+<generatorID>33F27D90-3077-863F-C210-1DEBBEB54007</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="recomendaciones" id="F70C0222-9C2B-A843-EC43-4F0B3DB40936">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[recomendaciones del medico para el paciente asociadas a la restriccion]]></commentInRDBMS>
+<generatorID>D88926BB-E05B-8061-C7DE-5629AB24BC4A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIEMBRO_cedula" id="AAEF71F4-F8BF-A98E-0162-1B98FE7B683E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>5682A334-251B-8BE7-11AC-91EDADD11A1A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8900C68C-BC08-170D-12F9-F01CD4ADCC0E" referredColumn="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B1D427E-0417-E5C4-D24A-BE29150FEFC3" name="Restriccion_medica_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>AC7CBE22-C921-0192-60A4-44BA2ACEDA50</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="954112C1-3C54-342F-5E34-BF6FFF776587"/>
+<colUsage columnID="AAEF71F4-F8BF-A98E-0162-1B98FE7B683E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA0745B5-F5FD-7057-F2C5-387AC1089BF3" name="Restriccion_medica_MIEMBRO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>16543AF7-0834-2ECF-4D65-97E4AAC75917</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAEF71F4-F8BF-A98E-0162-1B98FE7B683E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

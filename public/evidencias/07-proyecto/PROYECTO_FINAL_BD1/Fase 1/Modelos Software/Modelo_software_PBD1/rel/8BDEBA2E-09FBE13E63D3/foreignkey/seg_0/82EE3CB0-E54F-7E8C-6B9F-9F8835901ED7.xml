@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="82EE3CB0-E54F-7E8C-6B9F-9F8835901ED7" containerWithKeyObject="7B9888DC-FB5C-19F9-3113-48BD7FAE63BD" localFKIndex="63746A77-D89C-22E8-0524-0460AF78F0DB" name="PLAN_ENTRENAMIENTO_ENTRENADOR_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>223E768B-E2AF-CCCA-72C7-9C4DCABADF73</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>ENTRENADOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>01F82BE9-6F80-6CC0-3DDE-DAD902155771</referredTableID>
+<keyObject>6B6C413F-9BFC-B526-039F-BC9EA83349E3</keyObject>
+<referredKeyID>6B6C413F-9BFC-B526-039F-BC9EA83349E3</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

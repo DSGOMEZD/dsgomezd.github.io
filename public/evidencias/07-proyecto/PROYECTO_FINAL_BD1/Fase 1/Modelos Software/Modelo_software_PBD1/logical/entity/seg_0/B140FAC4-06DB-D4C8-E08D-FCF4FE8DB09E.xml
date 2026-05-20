@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B140FAC4-06DB-D4C8-E08D-FCF4FE8DB09E" name="MEMBRESIA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:31:08 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="estado" id="62A2A5CD-357B-64BF-1A37-6EF8F66626EC">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:31:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[estado activa o inactiva]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicio" id="60C40C22-1ECB-0135-FAAD-EF1828A7AE8C">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:34:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha de inicio de la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_fin" id="CBDD23FC-3B3D-266C-E791-485FBF2381F0">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha fin de la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="536A6977-096C-7B9F-EF2D-69900A32C0C5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:50:22 UTC</createdTime>
+<generatorID>740C1306-C0C7-C4F4-1E56-22BC46153A28</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>87B953EF-5174-FF18-0D30-353E38FCE4CC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_plan" id="E0C3D2A2-B41C-6544-DCFC-9D8DE3D32B70">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:58:22 UTC</createdTime>
+<generatorID>4D662EAC-E25C-DF6F-1F46-552A78ABE048</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>46578889-F901-93ED-2059-F2D056FAB3C9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3DE2E393-157F-6715-DE9E-3E9FBA560B5A" name="MEMBRESIA PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:31:43 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>536A6977-096C-7B9F-EF2D-69900A32C0C5</attributeRef>
+<attributeRef>E0C3D2A2-B41C-6544-DCFC-9D8DE3D32B70</attributeRef>
+<attributeRef>60C40C22-1ECB-0135-FAAD-EF1828A7AE8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

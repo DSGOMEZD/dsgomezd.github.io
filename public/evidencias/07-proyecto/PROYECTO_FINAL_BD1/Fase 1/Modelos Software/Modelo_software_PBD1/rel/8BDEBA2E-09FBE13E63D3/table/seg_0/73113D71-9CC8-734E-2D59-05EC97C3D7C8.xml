@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="73113D71-9CC8-734E-2D59-05EC97C3D7C8" name="EJERCICIO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>E5CCA9DC-70C4-011D-D03F-67DD2FED1696</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="descripcion_ejerc" id="E20D47D7-E30E-503E-3C80-086218D58A69">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[descripcion de lo que hay que hacer en el ejercicio]]></commentInRDBMS>
+<generatorID>8E044AFA-3F14-42E6-DF6B-18D1A71937B5</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_ejercicio" id="05C74433-8802-F4F2-3898-85D00CD9E8FD">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador del ejercicio]]></commentInRDBMS>
+<generatorID>B97D727D-8611-252A-F225-A8D80A3710A7</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_ejerc" id="33026F62-05C2-69DE-3276-69CCAACC64F7">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[nombre del ejercicio]]></commentInRDBMS>
+<generatorID>304A6D91-FC19-217D-60F2-4C6C83D6A78C</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAN_ENTRENAMIENTO_MIEMBRO_cedula" id="812482C3-1C72-718D-1E09-4373CBFB6B0E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>D5A39AE6-ACE1-F787-C1B4-9C5B15E1FCC2</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1CD60A48-4C42-0A7B-70F5-3E67166C7157" referredColumn="ACA73329-F55C-D6E0-929F-AF7BB89341CA"/>
+</associations>
+</Column>
+<Column name="reps_serie" id="084E17AF-3412-42B1-0189-7E451A540B48">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[numero de repeticiones de ese ejercicio en una serie]]></comment>
+<generatorID>2C5F95E0-AC30-CDAA-33C9-EDCBEE5A8024</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>1CD60A48-4C42-0A7B-70F5-3E67166C7157</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="num_series" id="C1C99CBC-EBC3-B5FD-3E00-202DD7AFDC1F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[numero de series de ese ejercicio]]></comment>
+<generatorID>126751FE-58AC-1279-E0CC-3E4A98B9EE3A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,3,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>1CD60A48-4C42-0A7B-70F5-3E67166C7157</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="229BBE9B-1776-3457-2728-F3D5B14DD269" name="EJERCICIO_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>EAA0C5D4-965F-103C-C476-C31FD85609DE</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05C74433-8802-F4F2-3898-85D00CD9E8FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEF606C4-E31B-A323-7093-4FB8CDC95BF5" name="EJERCICIO_PLAN_ENTRENAMIENTO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>AE899766-4533-6946-2855-8A6FB9F75F49</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="812482C3-1C72-718D-1E09-4373CBFB6B0E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Asistir" directorySegmentName="seg_0" id="93DCCD11-F39D-8143-B51E-C7BF17309AAA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:02:25 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1D6D3523-E8A2-475A-43B5-A730D586E998</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>529E8DDD-F91C-8D72-25E0-292B6F01ACC8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

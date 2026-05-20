@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Especializar" directorySegmentName="seg_0" id="A6DB9C62-4BF5-7BF9-793D-91FB90619110">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:04:27 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>8E859152-3791-063E-867C-D89D40EB383D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>99E5F8BE-DD6E-0530-4EAC-D0139F2B128E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

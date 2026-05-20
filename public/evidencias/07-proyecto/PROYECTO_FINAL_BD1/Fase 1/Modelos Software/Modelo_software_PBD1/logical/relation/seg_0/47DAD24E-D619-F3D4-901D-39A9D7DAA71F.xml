@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Generar" directorySegmentName="seg_0" id="47DAD24E-D619-F3D4-901D-39A9D7DAA71F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:19:55 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>3DE2E393-157F-6715-DE9E-3E9FBA560B5A</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B140FAC4-06DB-D4C8-E08D-FCF4FE8DB09E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>74DE1522-A6FA-7BE6-F449-6EA8B142BDAE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

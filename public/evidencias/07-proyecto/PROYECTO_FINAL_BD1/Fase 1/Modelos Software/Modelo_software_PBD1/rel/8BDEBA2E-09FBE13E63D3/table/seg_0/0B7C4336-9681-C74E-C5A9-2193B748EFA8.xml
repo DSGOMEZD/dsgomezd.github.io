@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B7C4336-9681-C74E-C5A9-2193B748EFA8" name="Mantenimiento">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OPERADOR_cedula" id="702F6687-9CD1-D85B-D9CF-31B1D3A0A22E">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C0A46FB7-721C-2306-152B-FEA3C08C062D" referredColumn="C37D9F0A-AE79-1639-9E36-66171E4E0377"/>
+</associations>
+</Column>
+<Column name="MAQUINAS_codigo_serie" id="6B58431E-479A-26C4-1452-CC0C2F0DE8A7">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7E15C30-0620-DA82-F214-3C128EF9FA7D" referredColumn="2FCDC782-ADDB-733F-9383-F0C4C875D6BF"/>
+</associations>
+</Column>
+<Column name="tipo_mant" id="64A7FDDE-3AF1-D0A2-89F1-453C4903CC9B">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[tipo de mantenimiento que el operario le realzara a la maquina]]></comment>
+<generatorID>2ECCA3F8-2F94-10BF-2253-7CAFE7697A28</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="fecha_mantenimiento" id="B1389EEF-2A4C-4292-2CE7-26F7B04F6384">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[fecha y hora a la que se hizo el mantenimiento a la maquina]]></comment>
+<generatorID>F6C793C6-FAEF-B76C-D30E-1F61911F5524</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="descripcion_mant" id="D3F23BE9-0E5D-5EC4-9B3E-1A4569893E83">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[descripcion detallada de lo que se hizo en el mantenimiento]]></comment>
+<generatorID>41DF7678-5C61-B971-292A-0F7CF6B76A87</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1195258E-167E-1EC8-1494-6B3E536BC192" name="Mantenimiento_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="702F6687-9CD1-D85B-D9CF-31B1D3A0A22E"/>
+<colUsage columnID="6B58431E-479A-26C4-1452-CC0C2F0DE8A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1E87AD1-6F61-BDDC-CE16-C9808F3A927A" name="Mantenimiento_OPERADOR_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>32A83E71-33E9-0764-8105-D2CE83C9171D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="702F6687-9CD1-D85B-D9CF-31B1D3A0A22E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9585CB3-BA68-ACB2-3DDE-14E8193B11D8" name="Mantenimiento_MAQUINAS_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>32A83E71-33E9-0764-8105-D2CE83C9171D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B58431E-479A-26C4-1452-CC0C2F0DE8A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

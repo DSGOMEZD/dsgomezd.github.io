@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Tenerv2" directorySegmentName="seg_0" id="16543AF7-0834-2ECF-4D65-97E4AAC75917">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 05:02:26 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>C334276D-E254-19F8-C469-49D536151974</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1D6D3523-E8A2-475A-43B5-A730D586E998</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5ACFF67B-59E0-7B17-2890-B1821479E18B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

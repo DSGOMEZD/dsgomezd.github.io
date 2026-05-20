@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="529E8DDD-F91C-8D72-25E0-292B6F01ACC8" name="CLASE">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:33:06 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_clase" id="0FFD3A85-77A5-2AAC-3220-EA99F0CB3126">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:33:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador de la clase]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="4A81D51D-2657-7785-BCA3-90B09DD4DD52">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:35:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[estado en el que se encuentra la clase(programada, cancelada,finalizada)]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comentario" id="80EF9447-720F-1B64-6B9D-3080E0916A62">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:37:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[comentario o nota o requisitos que el entrenador que dirige la clase deja para que las personas que asisten a esta tengan en cuenta antes de la clase, o tambien para dejar al final de la clase o motivo de cancelacion]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cupos" id="0C8665D1-E6A8-437C-CBC5-77A12BAB8331">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:49:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[capacidad de personas que el entrenador acepta en la clase, este es limitado por la capacidad de la sala y el valor lo decide el entrenador]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_sala" id="6058386B-3725-8900-550B-E63B90F632E3">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:53:14 UTC</createdTime>
+<generatorID>28E5E1F0-C4C5-38C6-FB81-8413190A5CE0</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>8375268C-22B1-A289-0A64-36FF53848E49</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_horario" id="971C81FF-797C-0FEF-B509-9CC65927C916">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:53:57 UTC</createdTime>
+<generatorID>44D0FCDC-E900-9451-B6AC-83E1E2BF8BA9</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>E4F983D3-6594-9B2D-2AA6-1B5240163A7F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_deporte" id="DD382BD0-7FFA-FDB2-6348-9C072B242ABD">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:03:52 UTC</createdTime>
+<generatorID>0E87DB86-0505-9AB8-2443-C4DB051A2C87</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>FA04F8ED-3E74-0193-D80E-E114CB96D21D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E9034816-0B54-3C98-A952-422E09253A4C" name="CLASE PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:35:15 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0FFD3A85-77A5-2AAC-3220-EA99F0CB3126</attributeRef>
+<attributeRef>6058386B-3725-8900-550B-E63B90F632E3</attributeRef>
+<attributeRef>971C81FF-797C-0FEF-B509-9CC65927C916</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

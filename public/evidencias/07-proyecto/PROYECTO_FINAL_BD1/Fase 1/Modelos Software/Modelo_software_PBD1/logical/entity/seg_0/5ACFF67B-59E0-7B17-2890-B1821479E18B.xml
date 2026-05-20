@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5ACFF67B-59E0-7B17-2890-B1821479E18B" name="Restriccion_medica">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:38:44 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_restriccion" id="6BFD4760-C3E4-48FC-2AA0-82628EFD461D">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:39:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador de la restriccion]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="E91FED18-6094-FB0E-794B-609DEB269787">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:41:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[tipo de restriccion(lesion,enfermedad,limitacion, etc)]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="41D02141-EFD3-4202-2A82-4909FCAABD7A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:42:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[descripcion de la restriccion asosciada a un paciente]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nivel_gravedad" id="33F27D90-3077-863F-C210-1DEBBEB54007">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:43:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[nivel de gravedad de la restriccion(leve,moderado,alto)]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="recomendaciones" id="D88926BB-E05B-8061-C7DE-5629AB24BC4A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:44:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[recomendaciones del medico para el paciente asociadas a la restriccion]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="5682A334-251B-8BE7-11AC-91EDADD11A1A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 05:02:26 UTC</createdTime>
+<generatorID>16543AF7-0834-2ECF-4D65-97E4AAC75917</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>87B953EF-5174-FF18-0D30-353E38FCE4CC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AC7CBE22-C921-0192-60A4-44BA2ACEDA50" name="Restriccion_medica PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:41:32 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6BFD4760-C3E4-48FC-2AA0-82628EFD461D</attributeRef>
+<attributeRef>5682A334-251B-8BE7-11AC-91EDADD11A1A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

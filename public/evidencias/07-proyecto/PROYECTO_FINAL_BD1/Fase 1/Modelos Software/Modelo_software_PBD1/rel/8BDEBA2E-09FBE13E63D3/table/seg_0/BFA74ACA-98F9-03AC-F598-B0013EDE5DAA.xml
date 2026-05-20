@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BFA74ACA-98F9-03AC-F598-B0013EDE5DAA" name="MEMBRESIA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>B140FAC4-06DB-D4C8-E08D-FCF4FE8DB09E</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="estado" id="42A87603-23F2-BC29-B293-BB0623DFBE82">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[estado activa o inactiva]]></commentInRDBMS>
+<generatorID>62A2A5CD-357B-64BF-1A37-6EF8F66626EC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicio" id="6AC101F2-A7BA-5D67-199F-5140A313C336">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha de inicio de la membresia]]></commentInRDBMS>
+<generatorID>60C40C22-1ECB-0135-FAAD-EF1828A7AE8C</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_fin" id="B5E01225-BDC9-A73D-E833-82CDD7252388">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha fin de la membresia]]></commentInRDBMS>
+<generatorID>CBDD23FC-3B3D-266C-E791-485FBF2381F0</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIEMBRO_cedula" id="B4944085-2319-81DC-029E-4A16B153DEE7">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>536A6977-096C-7B9F-EF2D-69900A32C0C5</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7EC685DE-D814-3970-07BF-B3DA7AED37EE" referredColumn="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</associations>
+</Column>
+<Column name="PLAN_id_plan" id="1020D5E1-89FD-B859-CEBB-A671101993E8">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>E0C3D2A2-B41C-6544-DCFC-9D8DE3D32B70</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="572BE882-2FAC-E152-CEE9-49553272D340" referredColumn="5DFA55A9-9885-6CC1-8DB0-9BF3A585B5FB"/>
+</associations>
+</Column>
+<Column name="id_membresia" id="AD5B9356-C4BA-730D-51D6-E9FFC3F8B824">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[identificador de la membresia]]></comment>
+<generatorID>C575B5ED-FF60-7E00-353E-478E6EA3518D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7EC685DE-D814-3970-07BF-B3DA7AED37EE</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="fecha_inicio1" id="D7593615-1329-DF98-67C7-5600BA52ACEA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[fecha de inicio de la membresia con el gym en un plan]]></comment>
+<generatorID>8985E0B4-0D69-40E1-30B6-2283939EF1B5</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7EC685DE-D814-3970-07BF-B3DA7AED37EE</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="fecha_fin1" id="1D150551-1A73-EAC4-DFCE-FEB6C752BB77">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[fecha final de la membrecia con el gym en ese plan]]></comment>
+<generatorID>B7662F25-46A8-982E-B6D5-40157E18EAEF</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7EC685DE-D814-3970-07BF-B3DA7AED37EE</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="estado1" id="0A8EAE57-824D-D80D-EDA2-135156B97C0A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<comment><![CDATA[estado de la membrecia(activa,vencida)]]></comment>
+<generatorID>AD3F8FF5-B948-E4F8-9DD9-BF9E8CA4CFD3</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>7EC685DE-D814-3970-07BF-B3DA7AED37EE</dependOnForeignKeyID>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="22B1CA28-2566-5368-0E01-3655A6E50AAB" name="MEMBRESIA_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>3DE2E393-157F-6715-DE9E-3E9FBA560B5A</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4944085-2319-81DC-029E-4A16B153DEE7"/>
+<colUsage columnID="1020D5E1-89FD-B859-CEBB-A671101993E8"/>
+<colUsage columnID="6AC101F2-A7BA-5D67-199F-5140A313C336"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CE9079E4-EF8E-1010-7294-8E2FD406AC72" name="MEMBRESIA_PLAN_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>4D662EAC-E25C-DF6F-1F46-552A78ABE048</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1020D5E1-89FD-B859-CEBB-A671101993E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DABB0C45-80F3-7426-D86F-15CDD933F8C6" name="MEMBRESIA_MIEMBRO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>740C1306-C0C7-C4F4-1E56-22BC46153A28</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4944085-2319-81DC-029E-4A16B153DEE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01F82BE9-6F80-6CC0-3DDE-DAD902155771" name="ENTRENADOR">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>8E859152-3791-063E-867C-D89D40EB383D</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="4A272D89-2CB1-EA4B-8042-34CD6FD59F35">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[documento de identidad de la persona]]></commentInRDBMS>
+<generatorID>87B953EF-5174-FF18-0D30-353E38FCE4CC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="14B89F55-89EF-1430-8F24-F077137055F9" referredColumn="B931F3C7-FDF8-2C69-4D2B-EFE00B0D3608"/>
+</associations>
+</Column>
+<Column name="tipo_entrenamiento" id="1AC93913-D005-0484-5142-2D204DB4E1EE">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[tipo de entrenamiento que imparte(fuerza,aerobico,flexibilidad,equilibrio)]]></commentInRDBMS>
+<generatorID>9424B8CD-BC2F-BB21-CA9C-EB7374A52C52</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tiempo_experiencia" id="6DA4C5B6-B85B-C33E-64C0-EAD08128AD35">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[tiempo de experiencia del entrenador en meses]]></commentInRDBMS>
+<generatorID>88957E64-2862-A348-3B1E-E9F5AF3717BC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_exigencia" id="27583099-636F-FCDE-584D-7C6AB00C316C">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[nivel que exige el entrenado(bajo,moderado,medio,alto,extremo)]]></commentInRDBMS>
+<generatorID>9D409989-7D78-1476-6F23-7CE7E70507B0</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_ingreso_sis" id="074A0437-592F-7C90-58A7-26297F9B17D1">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha en la que fue ingresado al sistema]]></commentInRDBMS>
+<generatorID>3E550CF6-9EBC-D764-E5AC-D972CC5CA2DC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4015B34F-03C8-2780-1B02-0094FFD1AED4" name="ENTRENADOR_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>C334276D-E254-19F8-C469-49D536151974</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A272D89-2CB1-EA4B-8042-34CD6FD59F35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B6C413F-9BFC-B526-039F-BC9EA83349E3" name="ENTRENADOR_PKv1">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>5513CCED-51A0-BFAC-ABB9-55BD61C13AAE</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="0A25643D-1984-4D7A-DD24-70E88F0BC4E4" name="ENTRENADOR_PERSONA_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>9455F37B-0ADB-6E26-8206-F3E0B5756A69</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A272D89-2CB1-EA4B-8042-34CD6FD59F35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

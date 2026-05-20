@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Usarv3" directorySegmentName="seg_0" id="0A4D28EA-9813-0FEE-B9E5-3535E4615F96">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:56:54 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>B40D2EF4-9E2B-E4DD-EDDB-8361F539866A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>529E8DDD-F91C-8D72-25E0-292B6F01ACC8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="cantidad_equipo" id="E42C620C-7C08-D138-C61A-2800F7FC027A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:57:04 UTC</createdTime>
+<comment><![CDATA[cantidad de ese equipo que utilizen en la clase]]></comment>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

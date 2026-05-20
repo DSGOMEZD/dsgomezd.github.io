@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B40D2EF4-9E2B-E4DD-EDDB-8361F539866A" name="Equipamiento">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:52:02 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_equipamiento" id="6882A9EA-842D-A10F-C772-C3C27B61B911">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:52:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador del equipo]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="7F006A45-EE78-7A54-8D9A-C258B81F56B5">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:53:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[nombre del equipo]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="1546BAED-3828-29D2-78EE-EBBE08455954">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:54:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[desccripcion del equipo, para que sirve y en que se usa]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cantidad" id="1D8571C1-D6EE-E931-1495-60B7472B2E57">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:55:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[cantidad de ese equipo que existe en el gimnacio, para inventario]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2CB3C8EB-87D2-9641-2D00-19943262D6A6" name="Equipamiento PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:53:11 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6882A9EA-842D-A10F-C772-C3C27B61B911</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="572BE882-2FAC-E152-CEE9-49553272D340" containerWithKeyObject="BFA74ACA-98F9-03AC-F598-B0013EDE5DAA" localFKIndex="CE9079E4-EF8E-1010-7294-8E2FD406AC72" name="MEMBRESIA_PLAN_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>4D662EAC-E25C-DF6F-1F46-552A78ABE048</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>PLAN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>675620F5-E910-3933-A97C-E0C2D4C9EBEF</referredTableID>
+<keyObject>01916D18-51B4-9868-D356-E77731FC42C4</keyObject>
+<referredKeyID>01916D18-51B4-9868-D356-E77731FC42C4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_plan</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

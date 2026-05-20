@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CE856E0A-D7EF-E5E9-7D1B-24196BE715F0" name="Horario">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:40:09 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_horario" id="E4F983D3-6594-9B2D-2AA6-1B5240163A7F">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:40:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[horarios en los que se puede dar una clase en un salon]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="disponibilidad" id="34408914-569B-F88F-F2C8-8284C6E41238">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:41:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[disponibilidad del horario para programar una clase en esa sala]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hora_inicio" id="6FFDCBB2-3289-20E4-E056-44C8122DE8A6">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:42:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[hora en la que inicia el uso de la sala]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_fin" id="28AD12C6-6185-E42B-81A8-A8ABD94BE4EF">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:42:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[hora en la que finaliza el uso de la sala]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="E4018AF7-0C54-37AD-DE97-DD084CB6AE78">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:47:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[fecha del intervalo del tiempo]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6776652F-F2E5-781D-9F7D-2B5EB84C2019" name="Horario PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 21:41:21 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E4F983D3-6594-9B2D-2AA6-1B5240163A7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

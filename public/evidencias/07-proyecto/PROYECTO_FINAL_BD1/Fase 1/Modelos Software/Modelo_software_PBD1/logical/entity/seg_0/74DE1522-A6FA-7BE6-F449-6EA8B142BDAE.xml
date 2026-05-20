@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="74DE1522-A6FA-7BE6-F449-6EA8B142BDAE" name="PAGO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:38:08 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pago" id="402CADA3-0A07-9151-1F82-E53D9E28922A">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:38:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador del pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="metodo_pago" id="E2C54F7D-FCBD-B0CD-3E2E-EF4E38FC6507">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:38:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[metodo por el que se realizo el pago(efectivo,tarjeta,transaccion)]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_pago" id="4C695EC2-1602-4D6F-0536-D6EC7F688952">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:40:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[fehca en la que se realizo el pago]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor_pagado" id="B901FDE3-B00E-F623-A82F-C731E0ECDC9B">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:22:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[valor pagado para la membresia]]></commentInRDBMS>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="5BC78741-27A1-42DE-6C7B-94019DD5C729">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:46:29 UTC</createdTime>
+<generatorID>47DAD24E-D619-F3D4-901D-39A9D7DAA71F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>536A6977-096C-7B9F-EF2D-69900A32C0C5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_plan" id="0D6FA851-721D-2E06-7C66-779554DDD776">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:46:47 UTC</createdTime>
+<generatorID>47DAD24E-D619-F3D4-901D-39A9D7DAA71F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>E0C3D2A2-B41C-6544-DCFC-9D8DE3D32B70</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicio" id="E0EAC0B0-90AE-2FD8-7C43-BE04EF875DD3">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 06:51:36 UTC</createdTime>
+<generatorID>47DAD24E-D619-F3D4-901D-39A9D7DAA71F</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<referedAttribute>60C40C22-1ECB-0135-FAAD-EF1828A7AE8C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="044398EF-195A-B398-5E0F-5B70577D5B4F" name="PAGO PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-05 06:38:22 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>402CADA3-0A07-9151-1F82-E53D9E28922A</attributeRef>
+<attributeRef>5BC78741-27A1-42DE-6C7B-94019DD5C729</attributeRef>
+<attributeRef>0D6FA851-721D-2E06-7C66-779554DDD776</attributeRef>
+<attributeRef>E0EAC0B0-90AE-2FD8-7C43-BE04EF875DD3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

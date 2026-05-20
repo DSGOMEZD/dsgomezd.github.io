@@ -1,0 +1,343 @@
+USE ub_deporte;
+
+INSERT INTO PERSONA (cedula, telefono, correo, password, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, rol) VALUES
+('1000000001', '3001234567', 'admin@ubdeporte.edu.co',           'admin2024',      'Carlos',    'Alberto',   'Rodriguez', 'Moreno',    '1985-03-15', 'administrador'),
+('1000000002', '3012345678', 'juan.perez@ubdeporte.edu.co',      'entrenador123',  'Juan',      'Pablo',     'Perez',     'Garcia',    '1990-07-22', 'entrenador'),
+('1000000003', '3023456789', 'maria.lopez@ubdeporte.edu.co',     'entrenador123',  'Maria',     'Camila',    'Lopez',     'Sanchez',   '1992-11-30', 'entrenador'),
+('1000000004', '3034567890', 'ana.martinez@unbosque.edu.co',     'miembro123',     'Ana',       'Maria',     'Martinez',  'Torres',    '2000-04-10', 'miembro'),
+('1000000005', '3045678901', 'pedro.gomez@unbosque.edu.co',      'miembro123',     'Pedro',     NULL,        'Gomez',     'Vargas',    '1998-08-25', 'miembro'),
+('1000000006', '3056789012', 'laura.torres@unbosque.edu.co',     'miembro123',     'Laura',     'Sofia',     'Torres',    'Castro',    '2001-01-17', 'miembro'),
+('1000000007', '3067890123', 'diego.vargas@ubdeporte.edu.co',    'operador123',    'Diego',     NULL,        'Vargas',    'Herrera',   '1988-06-05', 'operador'),
+('1000000008', '3078901234', 'sofia.castro@ubdeporte.edu.co',    'entrenador123',  'Sofia',     'Valentina', 'Castro',    'Diaz',      '1994-09-12', 'entrenador'),
+('1000000009', '3089012345', 'carlos.mendoza@unbosque.edu.co',   'miembro123',     'Carlos',    'Andres',    'Mendoza',   'Rios',      '1997-03-08', 'miembro'),
+('1000000010', '3090123456', 'isabella.ruiz@unbosque.edu.co',    'miembro123',     'Isabella',  NULL,        'Ruiz',      'Mora',      '2003-07-14', 'miembro'),
+('1000000011', '3001122334', 'miguel.torres@unbosque.edu.co',    'miembro123',     'Miguel',    'Alejandro', 'Torres',    'Salinas',   '1995-12-02', 'miembro'),
+('1000000012', '3112233445', 'valentina.silva@unbosque.edu.co',  'miembro123',     'Valentina', NULL,        'Silva',     'Pena',      '2002-05-19', 'miembro'),
+('1000000013', '3123344556', 'andres.castro@unbosque.edu.co',    'miembro123',     'Andres',    'Felipe',    'Castro',    'Mora',      '1999-09-03', 'miembro'),
+('1000000014', '3134455667', 'daniela.reyes@unbosque.edu.co',    'miembro123',     'Daniela',   'Lucia',     'Reyes',     'Jimenez',   '2001-11-28', 'miembro'),
+('1000000015', '3145566778', 'sergio.mora@unbosque.edu.co',      'miembro123',     'Sergio',    NULL,        'Mora',      'Cardenas',  '1996-04-15', 'miembro'),
+('1000000016', '3156677889', 'camila.herrera@unbosque.edu.co',   'miembro123',     'Camila',    'Andrea',    'Herrera',   'Vega',      '2000-08-07', 'miembro'),
+('1000000017', '3167788990', 'nicolas.pardo@unbosque.edu.co',    'miembro123',     'Nicolas',   'Sebastian', 'Pardo',     'Gutierrez', '1993-02-22', 'miembro'),
+('1000000018', '3178899001', 'luisa.fernandez@unbosque.edu.co',  'miembro123',     'Luisa',     'Maria',     'Fernandez', 'Ospina',    '2004-01-30', 'miembro'),
+('1000000019', '3189900112', 'jorge.salinas@unbosque.edu.co',    'miembro123',     'Jorge',     'Esteban',   'Salinas',   'Munoz',     '1997-06-11', 'miembro'),
+('1000000020', '3190011223', 'paula.garzon@unbosque.edu.co',     'miembro123',     'Paula',     NULL,        'Garzon',    'Betancur',  '2003-10-05', 'miembro'),
+('1000000021', '3201122334', 'jose.rincon@ubdeporte.edu.co',     'entrenador123',  'Jose',      'Luis',      'Rincon',    'Castillo',  '1986-07-18', 'entrenador'),
+('1000000022', '3212233445', 'elena.mora@ubdeporte.edu.co',      'operador123',    'Elena',     'Patricia',  'Mora',      'Suarez',    '1991-03-25', 'operador'),
+('1000000023', '3223344556', 'tomas.vega@unbosque.edu.co',       'miembro123',     'Tomas',     NULL,        'Vega',      'Romero',    '2000-12-14', 'miembro'),
+('1000000024', '3234455667', 'mariana.diaz@unbosque.edu.co',     'miembro123',     'Mariana',   'Jose',      'Diaz',      'Leon',      '1999-08-01', 'miembro'),
+('1000000025', '3245566778', 'felipe.arango@unbosque.edu.co',    'miembro123',     'Felipe',    'Andres',    'Arango',    'Pedraza',   '2002-03-09', 'miembro');
+
+INSERT INTO MIEMBRO (cedula, altura, peso_actual, nivel_experiencia) VALUES
+('1000000004', 165,  58.50, 'novato'),
+('1000000005', 175,  80.00, 'avanzado'),
+('1000000006', 160,  55.30, 'novato'),
+('1000000009', 178,  85.00, 'avanzado'),
+('1000000010', 162,  52.00, 'novato'),
+('1000000011', 180,  90.50, 'profesional'),
+('1000000012', 163,  57.00, 'novato'),
+('1000000013', 177,  83.00, 'avanzado'),
+('1000000014', 161,  54.50, 'novato'),
+('1000000015', 182,  92.00, 'profesional'),
+('1000000016', 166,  61.00, 'novato'),
+('1000000017', 176,  78.50, 'avanzado'),
+('1000000018', 158,  50.00, 'novato'),
+('1000000019', 179,  87.00, 'avanzado'),
+('1000000020', 164,  56.50, 'novato'),
+('1000000023', 171,  69.00, 'novato'),
+('1000000024', 168,  63.50, 'novato'),
+('1000000025', 173,  75.00, 'novato');
+
+INSERT INTO ENTRENADOR (cedula, tipo_entrenamiento, tiempo_experiencia, nivel_exigencia, fecha_ingreso_sis) VALUES
+('1000000002', 'fuerza',       60, 'alto',     '2021-01-10'),
+('1000000003', 'flexibilidad', 48, 'moderado', '2022-03-15'),
+('1000000008', 'aerobico',     36, 'medio',    '2023-06-01'),
+('1000000021', 'equilibrio',   72, 'extremo',  '2020-08-05');
+
+INSERT INTO OPERADOR (cedula, nivel_tecnico, especialidad, tipo_operador) VALUES
+('1000000007', 'avanzado',   'mecanico',  'correctivo'),
+('1000000022', 'intermedio', 'electrico', 'preventivo');
+
+INSERT INTO DEPORTE (nombre, descripcion) VALUES
+('Futbol',   'Deporte de equipo jugado con balon y porteria'),
+('Natacion', 'Deporte acuatico de resistencia y velocidad'),
+('CrossFit', 'Entrenamiento funcional de alta intensidad'),
+('Yoga',     'Disciplina de flexibilidad, equilibrio y meditacion'),
+('Boxeo',    'Deporte de combate con tecnica de punos'),
+('Pilates',  'Metodo de entrenamiento enfocado en el core y la postura');
+
+INSERT INTO Especializar (ENTRENADOR_cedula, DEPORTE_id_deporte) VALUES
+('1000000002', 3), ('1000000002', 5),
+('1000000003', 4), ('1000000003', 2),
+('1000000008', 1), ('1000000008', 3),
+('1000000021', 4), ('1000000021', 6);
+
+INSERT INTO Sala (capacidad) VALUES
+(20), (15), (30), (25), (12);
+
+INSERT INTO Horario (dia_semana, hora_inicio, hora_fin) VALUES
+('lunes','06:00:00','07:00:00'), ('lunes','07:00:00','08:00:00'), ('lunes','08:00:00','09:00:00'),
+('lunes','09:00:00','10:00:00'), ('lunes','10:00:00','11:00:00'), ('lunes','11:00:00','12:00:00'),
+('lunes','14:00:00','15:00:00'), ('lunes','15:00:00','16:00:00'), ('lunes','16:00:00','17:00:00'),
+('lunes','17:00:00','18:00:00'), ('lunes','18:00:00','19:00:00'), ('lunes','19:00:00','20:00:00'),
+('martes','06:00:00','07:00:00'), ('martes','07:00:00','08:00:00'), ('martes','08:00:00','09:00:00'),
+('martes','09:00:00','10:00:00'), ('martes','10:00:00','11:00:00'), ('martes','11:00:00','12:00:00'),
+('martes','14:00:00','15:00:00'), ('martes','15:00:00','16:00:00'), ('martes','16:00:00','17:00:00'),
+('martes','17:00:00','18:00:00'), ('martes','18:00:00','19:00:00'), ('martes','19:00:00','20:00:00'),
+('miercoles','06:00:00','07:00:00'), ('miercoles','07:00:00','08:00:00'), ('miercoles','08:00:00','09:00:00'),
+('miercoles','09:00:00','10:00:00'), ('miercoles','10:00:00','11:00:00'), ('miercoles','11:00:00','12:00:00'),
+('miercoles','14:00:00','15:00:00'), ('miercoles','15:00:00','16:00:00'), ('miercoles','16:00:00','17:00:00'),
+('miercoles','17:00:00','18:00:00'), ('miercoles','18:00:00','19:00:00'), ('miercoles','19:00:00','20:00:00'),
+('jueves','06:00:00','07:00:00'), ('jueves','07:00:00','08:00:00'), ('jueves','08:00:00','09:00:00'),
+('jueves','09:00:00','10:00:00'), ('jueves','10:00:00','11:00:00'), ('jueves','11:00:00','12:00:00'),
+('jueves','14:00:00','15:00:00'), ('jueves','15:00:00','16:00:00'), ('jueves','16:00:00','17:00:00'),
+('jueves','17:00:00','18:00:00'), ('jueves','18:00:00','19:00:00'), ('jueves','19:00:00','20:00:00'),
+('viernes','06:00:00','07:00:00'), ('viernes','07:00:00','08:00:00'), ('viernes','08:00:00','09:00:00'),
+('viernes','09:00:00','10:00:00'), ('viernes','10:00:00','11:00:00'), ('viernes','11:00:00','12:00:00'),
+('viernes','14:00:00','15:00:00'), ('viernes','15:00:00','16:00:00'), ('viernes','16:00:00','17:00:00'),
+('viernes','17:00:00','18:00:00'), ('viernes','18:00:00','19:00:00'), ('viernes','19:00:00','20:00:00'),
+('sabado','07:00:00','08:00:00'), ('sabado','08:00:00','09:00:00'), ('sabado','09:00:00','10:00:00'),
+('sabado','10:00:00','11:00:00'), ('sabado','11:00:00','12:00:00'), ('sabado','14:00:00','15:00:00'),
+('sabado','15:00:00','16:00:00'), ('sabado','16:00:00','17:00:00'),
+('domingo','09:00:00','10:00:00'), ('domingo','10:00:00','11:00:00'), ('domingo','11:00:00','12:00:00');
+
+INSERT INTO CLASE (id_clase, estado, comentario, cupos, fecha, Sala_id_sala, Horario_id_horario, DEPORTE_id_deporte, ENTRENADOR_cedula) VALUES
+( 1, 'programada', 'Clase de CrossFit para todos los niveles',         15, '2026-05-18', 1,  1, 3, '1000000002'),
+( 2, 'programada', 'Sesion de Yoga relajante',                         12, '2026-05-18', 2,  2, 4, '1000000003'),
+( 3, 'programada', 'Entrenamiento de Boxeo nivel intermedio',          10, '2026-05-19', 1, 15, 5, '1000000002'),
+( 4, 'programada', 'CrossFit avanzado en sala grande',                 25, '2026-05-20', 3, 28, 3, '1000000008'),
+( 5, 'finalizada', 'Yoga matutino sesion del lunes pasado',            12, '2026-05-11', 2,  3, 4, '1000000003'),
+( 6, 'programada', 'Natacion tecnica de estilos',                      10, '2026-05-19', 2, 16, 2, '1000000003'),
+( 7, 'programada', 'Futbol tactico y juego en equipo',                 20, '2026-05-21', 3, 38, 1, '1000000008'),
+( 8, 'programada', 'CrossFit de alto rendimiento viernes',             15, '2026-05-22', 1, 50, 3, '1000000002'),
+( 9, 'programada', 'Boxeo tecnico con sparring',                       12, '2026-05-20', 1, 27, 5, '1000000002'),
+(10, 'programada', 'Yoga y meditacion guiada',                         10, '2026-05-21', 2, 39, 4, '1000000003'),
+(11, 'finalizada', 'CrossFit martes sesion anterior',                  20, '2026-05-12', 3, 14, 3, '1000000008'),
+(12, 'cancelada',  'Natacion cancelada por mantenimiento de piscina',  10, '2026-05-13', 2, 26, 2, '1000000003'),
+(13, 'programada', 'Futbol del sabado partido de practica',            25, '2026-05-23', 3, 62, 1, '1000000008'),
+(14, 'programada', 'Pilates basico nivel introductorio',               12, '2026-05-19', 5, 17, 6, '1000000021'),
+(15, 'programada', 'Yoga equilibrio y respiracion profunda',           10, '2026-05-20', 2, 29, 4, '1000000021'),
+(16, 'programada', 'CrossFit funcional miercoles tarde',               15, '2026-05-20', 4, 32, 3, '1000000002'),
+(17, 'programada', 'Boxeo cardio para principiantes',                  12, '2026-05-21', 1, 40, 5, '1000000002'),
+(18, 'programada', 'Natacion resistencia y velocidad',                 10, '2026-05-22', 2, 51, 2, '1000000003'),
+(19, 'programada', 'Pilates avanzado con implementos',                 10, '2026-05-23', 5, 63, 6, '1000000021'),
+(20, 'finalizada', 'Futbol sesion tactica miercoles pasado',           20, '2026-05-13', 3, 25, 1, '1000000008'),
+(21, 'programada', 'CrossFit sabado sesion intensa',                   15, '2026-05-23', 1, 62, 3, '1000000002'),
+(22, 'programada', 'Yoga domingo sesion de recuperacion',              10, '2026-05-24', 2, 69, 4, '1000000003');
+
+INSERT INTO Asistir (MIEMBRO_cedula, CLASE_id_clase, CLASE_id_sala, CLASE_id_horario) VALUES
+('1000000004',  1, 1,  1), ('1000000005',  1, 1,  1), ('1000000009',  1, 1,  1),
+('1000000013',  1, 1,  1), ('1000000017',  1, 1,  1),
+('1000000004',  2, 2,  2), ('1000000006',  2, 2,  2), ('1000000010',  2, 2,  2), ('1000000014',  2, 2,  2),
+('1000000005',  3, 1, 15), ('1000000009',  3, 1, 15), ('1000000013',  3, 1, 15),
+('1000000004',  4, 3, 28), ('1000000005',  4, 3, 28), ('1000000006',  4, 3, 28),
+('1000000009',  4, 3, 28), ('1000000011',  4, 3, 28), ('1000000015',  4, 3, 28),
+('1000000004',  5, 2,  3), ('1000000006',  5, 2,  3), ('1000000010',  5, 2,  3),
+('1000000006',  6, 2, 16), ('1000000010',  6, 2, 16), ('1000000018',  6, 2, 16),
+('1000000005',  7, 3, 38), ('1000000009',  7, 3, 38), ('1000000011',  7, 3, 38),
+('1000000013',  7, 3, 38), ('1000000019',  7, 3, 38),
+('1000000004',  8, 1, 50), ('1000000005',  8, 1, 50), ('1000000009',  8, 1, 50), ('1000000015',  8, 1, 50),
+('1000000005', 11, 3, 14), ('1000000011', 11, 3, 14), ('1000000017', 11, 3, 14),
+('1000000006', 14, 5, 17), ('1000000010', 14, 5, 17), ('1000000014', 14, 5, 17), ('1000000016', 14, 5, 17),
+('1000000004', 15, 2, 29), ('1000000006', 15, 2, 29),
+('1000000016', 16, 4, 32), ('1000000017', 16, 4, 32), ('1000000019', 16, 4, 32),
+('1000000005', 17, 1, 40), ('1000000013', 17, 1, 40),
+('1000000006', 18, 2, 51), ('1000000018', 18, 2, 51),
+('1000000005', 20, 3, 25), ('1000000011', 20, 3, 25),
+('1000000009', 21, 1, 62), ('1000000015', 21, 1, 62),
+('1000000004', 22, 2, 69), ('1000000010', 22, 2, 69);
+
+INSERT INTO CONTENIDO (titulo, descripcion, tipo_contenido, duracion, url_del_recurso, fecha_publicacion, autor, DEPORTE_id_deporte) VALUES
+('CrossFit para principiantes',      'Video tutorial con los movimientos basicos del CrossFit',                    'video',      25, 'https://resources.ubdeporte.edu.co/crossfit-intro',       '2026-01-15', 'Juan Perez',   3),
+('Secuencia de Yoga matutino',       'Guia de posturas para empezar el dia con energia',                           'guia',     NULL, 'https://resources.ubdeporte.edu.co/yoga-morning',         '2026-02-10', 'Maria Lopez',  4),
+('Historia y tecnica del Boxeo',     'Articulo sobre la historia del boxeo y sus tecnicas basicas',                'articulo', NULL, 'https://resources.ubdeporte.edu.co/boxeo-historia',       '2026-03-05', 'Juan Perez',   5),
+('Natacion: estilos y respiracion',  'Podcast sobre los cuatro estilos de natacion y respiracion',                 'podcast',   40, 'https://resources.ubdeporte.edu.co/natacion-estilos',     '2026-04-01', 'Maria Lopez',  2),
+('Estiramientos post-entreno',       'Rutina de estiramientos para recuperacion muscular',                         'video',     18, 'https://resources.ubdeporte.edu.co/estiramientos-post',   '2026-04-20', 'Maria Lopez',  4),
+('CrossFit avanzado: olimpicos',     'Guia tecnica de movimientos olimpicos aplicados al CrossFit',                'guia',     NULL, 'https://resources.ubdeporte.edu.co/crossfit-avanzado',    '2026-05-02', 'Juan Perez',   3),
+('Tactica y posicionamiento futbol', 'Articulo sobre sistemas tacticos y posicionamiento en el campo',             'articulo', NULL, 'https://resources.ubdeporte.edu.co/futbol-tactica',       '2026-05-05', 'Sofia Castro', 1),
+('Entrenamiento aerobico en zonas',  'Podcast sobre como estructurar sesiones aerobicas por zonas',                'podcast',   35, 'https://resources.ubdeporte.edu.co/aerobico-zonas',       '2026-05-10', 'Sofia Castro', 1),
+('Pilates para principiantes',       'Video introductorio al metodo Pilates con ejercicios basicos de core',       'video',     22, 'https://resources.ubdeporte.edu.co/pilates-intro',        '2026-05-12', 'Jose Rincon',  6),
+('Tecnica de nado libre',            'Tutorial de crol con enfasis en la rotacion de hombros y respiracion',      'tutorial',  30, 'https://resources.ubdeporte.edu.co/natacion-crol',        '2026-05-14', 'Maria Lopez',  2),
+('Boxeo defensivo',                  'Infografia sobre posiciones defensivas y movimiento de pies en boxeo',       'infografia',NULL, 'https://resources.ubdeporte.edu.co/boxeo-defensa',       '2026-05-15', 'Juan Perez',   5),
+('Futbol y condicion fisica',        'Guia de acondicionamiento fisico especifico para futbolistas',               'guia',     NULL, 'https://resources.ubdeporte.edu.co/futbol-condicion',     '2026-05-16', 'Sofia Castro', 1);
+
+INSERT INTO PLAN (duracion, precio) VALUES
+('mensual',      80000.00),
+('trimestral',  220000.00),
+('semestral',   400000.00),
+('anual',       700000.00);
+
+INSERT INTO MEMBRESIA (MIEMBRO_cedula, PLAN_id_plan, fecha_inicio, fecha_fin, estado) VALUES
+('1000000004', 2, '2026-04-01', '2026-06-30', 'activa'),
+('1000000005', 1, '2026-05-01', '2026-05-31', 'activa'),
+('1000000006', 3, '2026-03-01', '2026-08-31', 'activa'),
+('1000000009', 4, '2026-01-01', '2026-12-31', 'activa'),
+('1000000010', 1, '2026-05-01', '2026-05-31', 'activa'),
+('1000000011', 2, '2026-04-01', '2026-06-30', 'activa'),
+('1000000013', 3, '2026-02-01', '2026-07-31', 'activa'),
+('1000000015', 4, '2026-01-15', '2026-12-31', 'activa'),
+('1000000017', 1, '2026-05-01', '2026-05-31', 'activa'),
+('1000000019', 2, '2026-03-15', '2026-06-14', 'activa'),
+('1000000004', 1, '2026-01-01', '2026-01-31', 'vencida'),
+('1000000012', 1, '2026-02-01', '2026-02-28', 'vencida');
+
+INSERT INTO PAGO (metodo_pago, fecha_pago, valor_pagado, MEMBRESIA_cedula, MEMBRESIA_PLAN_id_plan, MEMBRESIA_fecha_inicio) VALUES
+('tarjeta_debito',  '2026-04-01', 220000.00, '1000000004', 2, '2026-04-01'),
+('efectivo',        '2026-05-01',  80000.00, '1000000005', 1, '2026-05-01'),
+('transferencia',   '2026-03-01', 400000.00, '1000000006', 3, '2026-03-01'),
+('tarjeta_credito', '2026-01-01', 700000.00, '1000000009', 4, '2026-01-01'),
+('efectivo',        '2026-05-01',  80000.00, '1000000010', 1, '2026-05-01'),
+('transferencia',   '2026-04-01', 220000.00, '1000000011', 2, '2026-04-01'),
+('tarjeta_credito', '2026-02-01', 400000.00, '1000000013', 3, '2026-02-01'),
+('efectivo',        '2026-01-15', 700000.00, '1000000015', 4, '2026-01-15'),
+('tarjeta_debito',  '2026-05-01',  80000.00, '1000000017', 1, '2026-05-01'),
+('transferencia',   '2026-03-15', 220000.00, '1000000019', 2, '2026-03-15'),
+('efectivo',        '2026-01-01',  80000.00, '1000000004', 1, '2026-01-01'),
+('tarjeta_debito',  '2026-02-01',  80000.00, '1000000012', 1, '2026-02-01');
+
+INSERT INTO Asignacion (ENTRENADOR_cedula, MIEMBRO_cedula, fecha_asignacion) VALUES
+('1000000002', '1000000004', '2026-01-15'),
+('1000000002', '1000000005', '2026-02-01'),
+('1000000002', '1000000009', '2026-04-10'),
+('1000000002', '1000000013', '2026-02-20'),
+('1000000002', '1000000015', '2026-01-20'),
+('1000000003', '1000000004', '2026-02-10'),
+('1000000003', '1000000006', '2026-03-01'),
+('1000000003', '1000000010', '2026-04-15'),
+('1000000003', '1000000014', '2026-03-10'),
+('1000000003', '1000000018', '2026-05-05'),
+('1000000008', '1000000005', '2026-03-15'),
+('1000000008', '1000000006', '2026-04-01'),
+('1000000008', '1000000011', '2026-05-01'),
+('1000000008', '1000000019', '2026-04-20'),
+('1000000021', '1000000016', '2026-05-10'),
+('1000000021', '1000000017', '2026-04-05'),
+('1000000021', '1000000006', '2026-05-12');
+
+INSERT INTO PLAN_ENTRENAMIENTO (id_asignacion, descripcion) VALUES
+( 1, 'Plan de fuerza y acondicionamiento para nivel novato'),
+( 2, 'Plan de fuerza adaptado a restriccion de rodilla derecha'),
+( 3, 'Plan de fuerza y potencia para nivel avanzado'),
+( 4, 'Plan de fuerza para nivel avanzado con enfasis en tecnica'),
+( 5, 'Plan de fuerza de alta intensidad para nivel profesional'),
+( 6, 'Plan de flexibilidad y movilidad articular complementario'),
+( 7, 'Plan de yoga y elongacion para correccion postural'),
+( 8, 'Plan de natacion tecnica y flexibilidad inicial'),
+( 9, 'Plan de flexibilidad y natacion para nivel novato'),
+(10, 'Plan de natacion y flexibilidad para iniciacion'),
+(11, 'Plan aerobico de bajo impacto cuidando lesion de rodilla'),
+(12, 'Plan aerobico introductorio con enfoque en resistencia base'),
+(13, 'Plan aerobico de resistencia y velocidad nivel profesional'),
+(14, 'Plan aerobico progresivo para nivel avanzado'),
+(15, 'Plan de equilibrio y pilates para nivel novato'),
+(16, 'Plan de equilibrio y fuerza funcional para nivel avanzado'),
+(17, 'Plan combinado de equilibrio y flexibilidad avanzado');
+
+INSERT INTO EJERCICIO (nombre_ejerc, descripcion_ejerc, reps_serie, num_series, PLAN_ENTRENAMIENTO_id_asignacion) VALUES
+('Sentadilla con peso corporal', 'Sentadilla profunda controlada sin carga adicional',   15, 3,  1),
+('Press de banca',               'Press de banca con barra a 30 kg',                     10, 4,  1),
+('Peso muerto rumano',           'Peso muerto con mancuernas a 20 kg',                    8, 3,  1),
+('Press de hombros sentado',     'Press militar en banco con respaldo a 25 kg',           12, 3,  2),
+('Curl de biceps de pie',        'Curl alternado con mancuernas de 15 kg',                15, 3,  2),
+('Extension de triceps en polea','Extension con cuerda en polea alta',                    15, 3,  2),
+('Sentadilla con barra',         'Sentadilla frontal con barra olimpica a 80 kg',          6, 5,  3),
+('Peso muerto convencional',     'Peso muerto con barra a 100 kg',                         5, 5,  3),
+('Dominadas con lastre',         'Dominadas en barra fija con chaleco de 10 kg',           8, 4,  3),
+('Remo con barra',               'Remo inclinado con barra a 60 kg',                       8, 4,  4),
+('Press inclinado mancuernas',   'Press en banco inclinado con mancuernas de 22 kg',      10, 4,  4),
+('Hip thrust',                   'Empuje de cadera con barra a 70 kg sobre banco',         8, 4,  4),
+('Clean and jerk',               'Arranque olimpico con barra a 90 kg',                    4, 5,  5),
+('Snatch',                       'Cargada olimpica con barra a 70 kg',                     4, 5,  5),
+('Box jumps explosivos',         'Salto explosivo a cajon de 75 cm',                      10, 4,  5),
+('Apertura de cadera en suelo',  'Estiramiento de cadera con mariposa tumbada 30s hold',   1, 5,  6),
+('Postura del guerrero II',      'Postura estatica en estocada lateral profunda 45s',      1, 3,  6),
+('Torsion espinal supina',       'Rotacion de columna tumbado boca arriba 30s por lado',   1, 4,  6),
+('Saludo al sol completo',       'Secuencia vinyasa de 12 posiciones encadenadas',         1, 3,  7),
+('Estiramiento isquiotibiales',  'Flexion hacia adelante sentado 45s',                     1, 5,  7),
+('Plancha abdominal',            'Plancha isometrica frontal 40 segundos',                 1, 4,  7),
+('Patada de piernas con tabla',  'Propulsion con tabla de natacion 25 m continuo',         1, 4,  8),
+('Crol basico 25 m',             'Nado continuo en estilo crol con respiracion bilateral', 1, 6,  8),
+('Estiramiento de hombros',      'Cruce de brazo por delante del pecho 30s por lado',      1, 3,  8),
+('Espalda 25 m',                 'Nado en estilo espalda a ritmo suave 25 m',              1, 4,  9),
+('Mariposa basica 15 m',         'Nado mariposa reducido a 15 m para iniciacion',          1, 3,  9),
+('Flotacion ventral',            'Posicion prona flotante sostenida 20s',                  1, 5,  9),
+('Respiracion bilateral crol',   'Practica de respiracion alterna cada 3 brazadas 25 m',   1, 5, 10),
+('Vuelta de agua con apoyo',     'Giro de pared asistido en los extremos de la piscina',   1, 6, 10),
+('Bicicleta estatica',           'Pedaleo continuo a resistencia baja-media 20 min',       1, 1, 11),
+('Eliptica',                     'Marcha eliptica sin impacto 15 min a ritmo moderado',    1, 2, 11),
+('Trote suave en cinta',         'Trote a 7 km/h durante 10 min con inclinacion 1%',       1, 2, 11),
+('Salto de cuerda basico',       'Salto continuo a ritmo moderado',                       30, 3, 12),
+('Step aerobico',                'Subida y bajada de step al ritmo de musica 10 min',      1, 4, 12),
+('Burpees modificados',          'Burpee sin salto final para menor impacto',             10, 3, 12),
+('Intervalo de carrera 400 m',   'Sprint al 85% de FC maxima con 90s de recuperacion',     1, 5, 13),
+('Cuerda de velocidad',          'Salto de velocidad doble giro',                         60, 4, 13),
+('Box jumps',                    'Salto explosivo a cajon de 60 cm',                      12, 4, 13),
+('Carrera continua 5 km',        'Trote a ritmo moderado durante 5 km en cinta',           1, 3, 14),
+('Remo en maquina',              'Remo continuo en rowing machine 10 min intensidad media', 1, 3, 14),
+('Plancha lateral',              'Plancha lateral isometrica 30s por lado',                1, 4, 15),
+('Puente de gluteos',            'Elevacion de cadera con apoyo en suelo 20 reps',        20, 3, 15),
+('Equilibrio sobre bosu',        'Equilibrio unipodal sobre bosu 30s por pierna',          1, 4, 15),
+('Pilates rodillo',              'Masaje muscular con rodillo de foam 10 min',             1, 1, 16),
+('Cien en pilates',              'Ejercicio clasico de pilates para activacion de core',   1, 3, 16),
+('Tijeras pilates',              'Extension alternada de piernas en posicion supina',     10, 3, 16),
+('Postura del arbol',            'Equilibrio unipodal con brazos elevados 45s',            1, 4, 17),
+('Torsion sentada',              'Torsion espinal profunda sentado en colchoneta 30s',     1, 5, 17),
+('Estiramiento de psoas',        'Estocada profunda con caida de cadera 40s por lado',     1, 4, 17);
+
+INSERT INTO Restriccion_medica (tipo, descripcion, nivel_gravedad, recomendaciones, MIEMBRO_cedula) VALUES
+('lesion',            'Lesion leve en rodilla derecha por sobrecarga',         'leve',     'Evitar sentadillas profundas y ejercicios de alto impacto',                    '1000000005'),
+('limitacion_fisica', 'Hiperlordosis lumbar leve',                             'moderado', 'Fortalecer core, evitar cargas en bipedestacion prolongada',                   '1000000006'),
+('alergia',           'Sensibilidad al cloro en piel y vias respiratorias',   'leve',     'Usar gafas y tapones, ducharse inmediatamente post-piscina',                   '1000000010'),
+('enfermedad',        'Asma leve controlada con medicacion',                   'moderado', 'Tener inhalador disponible, evitar ejercicio intenso en ambientes frios',       '1000000013'),
+('lesion',            'Tendinitis leve en hombro derecho',                     'leve',     'Evitar press por encima de la cabeza y cargas pesadas en hombro',              '1000000015'),
+('limitacion_fisica', 'Escoliosis moderada en columna toracica',               'moderado', 'Evitar cargas axiales, priorizar ejercicios de movilidad y elongacion',        '1000000017'),
+('otra',              'Mareos ocasionales en esfuerzos de alta intensidad',    'leve',     'Hidratacion constante, evitar cambios bruscos de posicion',                    '1000000019');
+
+INSERT INTO Equipamiento (nombre, descripcion, cantidad) VALUES
+('Mancuernas',            'Set de mancuernas de 5 a 30 kg',                        20),
+('Colchonetas',           'Colchonetas antideslizantes para yoga y CrossFit',       15),
+('Bandas de resistencia', 'Bandas elasticas de diferentes niveles de resistencia',  30),
+('Cuerdas para saltar',   'Cuerdas de velocidad para entrenamiento cardiovascular', 10),
+('Kettlebells',           'Pesas rusas de 8, 12, 16 y 20 kg',                      16),
+('Barras olimpicas',      'Barras olimpicas de 20 kg con discos intercambiables',    6),
+('Rodillos de foam',      'Rodillos de espuma para recuperacion muscular',          10),
+('Sacos de boxeo',        'Sacos de boxeo colgantes de cuero sintetico 40 kg',      5),
+('Guantes de boxeo',      'Guantes de entrenamiento de boxeo 12 oz',               16),
+('Tablas de natacion',    'Tablas de flotacion para entrenamiento de piernas',      12);
+
+INSERT INTO Usarv3 (Equipamiento_id_equipamiento, CLASE_id_clase, CLASE_Sala_id_sala, CLASE_Horario_id_horario, cantidad_equipo) VALUES
+(1, 1, 1,  1, 15), (2, 1, 1,  1, 15), (5, 1, 1,  1,  8),
+(2, 2, 2,  2, 12), (3, 2, 2,  2, 12),
+(8, 3, 1, 15,  8), (9, 3, 1, 15, 10),
+(1, 4, 3, 28, 20), (2, 4, 3, 28, 15), (6, 4, 3, 28,  4),
+(2, 5, 2,  3, 12), (3, 5, 2,  3, 12),
+(1, 8, 1, 50, 15), (2, 8, 1, 50, 15), (5, 8, 1, 50,  8),
+(8, 9, 1, 27,  8), (9, 9, 1, 27, 10),
+(2,10, 2, 39, 10), (3,10, 2, 39, 10),
+(2,14, 5, 17, 12), (7,14, 5, 17, 10),
+(2,15, 2, 29, 10), (3,15, 2, 29, 10),
+(1,16, 4, 32, 15), (4,16, 4, 32,  8), (5,16, 4, 32,  6),
+(8,17, 1, 40,  8), (9,17, 1, 40, 10),
+(10,18, 2, 51,  8),
+(2,19, 5, 63, 10), (7,19, 5, 63,  8),
+(1,21, 1, 62, 15), (4,21, 1, 62, 10);
+
+INSERT INTO MAQUINAS (nombre_maquina, modelo, marca, tipo_maquina, estado, capacidad) VALUES
+('Cinta de correr',     'T700',   'Life Fitness', 'cardio',    'operativa',          1.50),
+('Bicicleta estatica',  'IC7',    'Matrix',        'cardio',    'en_mantenimiento',   1.20),
+('Rack de sentadillas', 'SR-100', 'Technogym',     'fuerza',    'operativa',          2.00),
+('Eliptica',            'E50',    'Precor',         'cardio',    'operativa',          1.30),
+('Banco de pesas',      'BP-200', 'BH Fitness',     'fuerza',    'operativa',          1.50),
+('Maquina de poleas',   'CP-500', 'Life Fitness',   'fuerza',    'operativa',          1.80),
+('Rowing machine',      'R900',   'Concept2',       'cardio',    'operativa',          1.40),
+('Maquina de cables',   'FT-100', 'Technogym',     'funcional', 'operativa',          1.60),
+('Prensa de piernas',   'LP-300', 'Hammer',         'fuerza',    'en_reparacion',      2.50),
+('Escaladora',          'SC-200', 'StairMaster',    'cardio',    'operativa',          1.20);
+
+INSERT INTO Mantenimiento (OPERADOR_cedula, MAQUINAS_codigo_serie, tipo_mant, fecha_mantenimiento, descripcion_mant) VALUES
+('1000000007', 2, 'correctivo', '2026-05-10', 'Reparacion del sistema de resistencia magnetica. Se reemplazo el sensor de cadencia y se calibro el freno electromagnetico.'),
+('1000000007', 1, 'preventivo', '2026-04-20', 'Mantenimiento preventivo de cinta de correr. Lubricacion de banda, revision del motor y ajuste de tension.'),
+('1000000007', 3, 'preventivo', '2026-05-05', 'Revision de pines de seguridad y lubricacion de guias del rack de sentadillas.'),
+('1000000022', 6, 'preventivo', '2026-04-15', 'Revision de cables y poleas. Lubricacion de guias y ajuste de tensores del sistema de poleas.'),
+('1000000022', 9, 'correctivo', '2026-05-08', 'Reparacion de pistones hidraulicos de la prensa de piernas. Maquina fuera de servicio hasta nuevo aviso.'),
+('1000000007', 5, 'preventivo', '2026-05-15', 'Inspeccion general del banco de pesas. Revision de soldaduras y ajuste de tornillos de seguridad.'),
+('1000000022', 7, 'preventivo', '2026-05-03', 'Limpieza y lubricacion del riel de deslizamiento y revision del monitor de la rowing machine.');

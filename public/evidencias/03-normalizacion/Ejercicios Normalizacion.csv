@@ -1,0 +1,24 @@
+ACTIVIDAD, MONITOR, EDIFICIO, SALA, EQUIPO, ACTIVIDAD_EQUIPO, SESION, PLAN, ESTUDIANTE, INSCRIPCION_SESION;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+cod_actividad;nombre_actividad;nivel_actividad;nombre_monitor;especialidad_monitor;telefono_monitor;nombre_sala;capacidad_sala;dni_monitor;cod_sala;cod_edificio;nombre_edificio;campus;responsable_edificio;fecha;hora_inicio;hora_fin;descripcion_equipo;cantidad_equipo;cod_equipo;cod_estudiante;nombre_estudiante;programa_estudiante;cod_plan;nombre_plan;valor_plan;fecha_inscripcion
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+F1N;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+cod_actividad;nombre_actividad;nivel_actividad;;cod_actividad;dni_monitor;nombre_monitor;especialidad_monitor;telefono_monitor;;dni_monitor;cod_actividad;cod_sala;nombre_sala;capacidad_sala;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+cod_edificio;cod_equipo;descripcion_equipo;cantidad_equipo;;;cod_estudiante;nombre_estudiante;programa_estudiante;;cod_sala;nombre_edificio;campus;responsable_edificio;fecha;hora_inicio;hora_fin;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;cod_plan;nombre_plan;valor_plan;fecha_inscripcion;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+F2N;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+cod_actividad;nombre_actividad;nivel_actividad;;dni_monitor;nombre_monitor;especialidad_monitor;telefono_monitor;;cod_sala;nombre_sala;capacidad_sala;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+cod_edificio;cod_equipo;descripcion_equipo;cantidad_equipo;;cod_estudiante;nombre_estudiante;programa_estudiante;;nombre_edificio;campus;responsable_edificio;fecha;hora_inicio;hora_fin;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;cod_plan;nombre_plan;valor_plan;fecha_inscripcion;;;;;;;;;;;;;;;;;;;;;;

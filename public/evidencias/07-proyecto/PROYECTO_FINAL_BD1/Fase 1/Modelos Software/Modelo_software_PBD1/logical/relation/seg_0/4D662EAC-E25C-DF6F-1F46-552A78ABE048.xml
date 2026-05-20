@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Estar" directorySegmentName="seg_0" id="4D662EAC-E25C-DF6F-1F46-552A78ABE048">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 04:58:22 UTC</createdTime>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<engineerTo>
+<item key="8BDEBA2E-B42C-B6E1-9540-09FBE13E63D3" value="true"/>
+</engineerTo>
+<sourcePk>7F43B7A1-79E8-6627-B3AE-B7AA66BC83E3</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1EBC7756-0617-3103-C89D-3E9C270B7D96</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B140FAC4-06DB-D4C8-E08D-FCF4FE8DB09E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8900C68C-BC08-170D-12F9-F01CD4ADCC0E" containerWithKeyObject="7302B01F-BCB5-DFB9-7D37-A1060BB34BFF" localFKIndex="EA0745B5-F5FD-7057-F2C5-387AC1089BF3" name="Restriccion_medica_MIEMBRO_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>16543AF7-0834-2ECF-4D65-97E4AAC75917</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<referredTableLongName>MIEMBRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9D00D1DF-849D-35C5-CF39-FFB905E0BC7D</referredTableID>
+<keyObject>55886596-3407-5BD9-5A1F-9CC2EB76D03F</keyObject>
+<referredKeyID>55886596-3407-5BD9-5A1F-9CC2EB76D03F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cedula</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

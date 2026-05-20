@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71867169-982C-D765-6F6D-7EBF6DA018C4" name="CLASE">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>529E8DDD-F91C-8D72-25E0-292B6F01ACC8</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_clase" id="6F95CE0D-15D4-D24A-C6D0-3FFDD00FCB1D">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[identificador de la clase]]></commentInRDBMS>
+<generatorID>0FFD3A85-77A5-2AAC-3220-EA99F0CB3126</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="B8A7F9BB-66BE-E5F4-A90B-4EB6C89059E3">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[estado en el que se encuentra la clase(programada, cancelada,finalizada)]]></commentInRDBMS>
+<generatorID>4A81D51D-2657-7785-BCA3-90B09DD4DD52</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comentario" id="61E94921-E4DA-8184-0980-E23A0D23846B">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[comentario o nota o requisitos que el entrenador que dirige la clase deja para que las personas que asisten a esta tengan en cuenta antes de la clase, o tambien para dejar al final de la clase o motivo de cancelacion]]></commentInRDBMS>
+<generatorID>80EF9447-720F-1B64-6B9D-3080E0916A62</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cupos" id="011E9EC0-CE9B-DD34-1189-1C5E7A79A805">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[capacidad de personas que el entrenador acepta en la clase, este es limitado por la capacidad de la sala y el valor lo decide el entrenador]]></commentInRDBMS>
+<generatorID>0C8665D1-E6A8-437C-CBC5-77A12BAB8331</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sala_id_sala" id="C292690E-B761-0156-C6B5-701D36B75043">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>6058386B-3725-8900-550B-E63B90F632E3</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0BD5CEDC-996A-93D7-3088-C7985C6EA201" referredColumn="56B18A4E-F898-20A8-2199-6F193B4122A1"/>
+</associations>
+</Column>
+<Column name="Horario_id_horario" id="09C477DB-7867-8F3A-18B8-66E9A1F03051">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>971C81FF-797C-0FEF-B509-9CC65927C916</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB58CD51-BCCF-063D-F5ED-762F569D8280" referredColumn="88B9547E-579C-F5BD-34E6-55760EB8B43A"/>
+</associations>
+</Column>
+<Column name="DEPORTE_id_deporte" id="04399E5C-C2D4-4DCE-F2FF-CF8FA858B343">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>DD382BD0-7FFA-FDB2-6348-9C072B242ABD</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ADAC21A0-7A1E-50FD-7B31-E8EE554B064E" referredColumn="F9329225-E101-2C82-BC4B-11D88B99F94F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DFD039FC-1A92-77CC-D477-B238852AFF90" name="CLASE_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>E9034816-0B54-3C98-A952-422E09253A4C</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F95CE0D-15D4-D24A-C6D0-3FFDD00FCB1D"/>
+<colUsage columnID="C292690E-B761-0156-C6B5-701D36B75043"/>
+<colUsage columnID="09C477DB-7867-8F3A-18B8-66E9A1F03051"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B8CD7EC-D8B9-AC63-ABA2-4741D0383860" name="CLASE_ENTRENADOR_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>4E32084E-7ECA-4E59-D2E4-833C2C68214B</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="0751AED4-7C2B-02D3-F582-9CDC7D01088C" name="CLASE_DEPORTE_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>0E87DB86-0505-9AB8-2443-C4DB051A2C87</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04399E5C-C2D4-4DCE-F2FF-CF8FA858B343"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E817360-C476-E7F5-7977-6851321D7C01" name="CLASE_Sala_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>28E5E1F0-C4C5-38C6-FB81-8413190A5CE0</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C292690E-B761-0156-C6B5-701D36B75043"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="68C61289-F0AF-D6A8-617B-F40758DBFF6F" name="CLASE_Horario_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>44D0FCDC-E900-9451-B6AC-83E1E2BF8BA9</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09C477DB-7867-8F3A-18B8-66E9A1F03051"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D00D1DF-849D-35C5-CF39-FFB905E0BC7D" name="MIEMBRO">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>1D6D3523-E8A2-475A-43B5-A730D586E998</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="35974D90-FF6B-D69E-8BBC-189DCB7578FA">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[documento de identidad de la persona]]></commentInRDBMS>
+<generatorID>87B953EF-5174-FF18-0D30-353E38FCE4CC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1BD08C4F-421F-B7FD-A1B7-4CC8C7C66AE3" referredColumn="B931F3C7-FDF8-2C69-4D2B-EFE00B0D3608"/>
+</associations>
+</Column>
+<Column name="altura" id="DA2CBA1F-819C-9F10-9320-230EB3D24427">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[altura en centimetros de la persona]]></commentInRDBMS>
+<generatorID>6A025255-B0F9-589D-4973-11BD88EE2490</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="peso_actual" id="324427E8-CBA7-92EC-A887-9922148BBCC6">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[peso en kg de la persona]]></commentInRDBMS>
+<generatorID>953EC3BA-EB3E-A1C3-3A34-CAECB60CCDEE</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel_experiencia" id="BDDC5038-0A2D-F450-0432-ED6827BF5010">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[nivel de experincia de la persona en actividad fisica segun su objetivo(novato, avanzado,profecional)]]></commentInRDBMS>
+<generatorID>44E3F348-C760-C80B-4C6E-F99599B00577</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="55886596-3407-5BD9-5A1F-9CC2EB76D03F" name="MIEMBRO_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>C334276D-E254-19F8-C469-49D536151974</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6687DE9C-76C9-0CDF-EB6D-F7075593AC0C" name="MIEMBRO_PERSONA_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>8CC574DA-5033-06CC-FB37-E1ABB87A6E78</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35974D90-FF6B-D69E-8BBC-189DCB7578FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

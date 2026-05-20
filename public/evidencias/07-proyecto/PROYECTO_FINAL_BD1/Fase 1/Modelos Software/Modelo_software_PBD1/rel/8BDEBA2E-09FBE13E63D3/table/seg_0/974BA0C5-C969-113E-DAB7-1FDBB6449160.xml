@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="974BA0C5-C969-113E-DAB7-1FDBB6449160" name="OPERADOR">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>62DB60CC-B112-D949-1D74-BD7A1D2BB286</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cedula" id="C37D9F0A-AE79-1639-9E36-66171E4E0377">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[documento de identidad de la persona]]></commentInRDBMS>
+<generatorID>87B953EF-5174-FF18-0D30-353E38FCE4CC</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE358277-D2CE-9EF5-8556-3F86B07A60D5" referredColumn="B931F3C7-FDF8-2C69-4D2B-EFE00B0D3608"/>
+</associations>
+</Column>
+<Column name="nivel_tecnico" id="184A6D2D-F85B-605A-E047-B9E934FCECE3">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[nivel tecnico, mejor preparado para el mantenimiento de las maquinas y equipo entre mas nivel]]></commentInRDBMS>
+<generatorID>91F2BF42-EECD-20CF-A2A5-06CAB16C9C26</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="especialidad" id="87E46D20-8C6A-8D12-1824-796ABC61E594">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[especialidad del operado(mecanico,electrico,inspeccion,gestio instalaciones)]]></commentInRDBMS>
+<generatorID>6433CAF7-1974-4A9F-EF94-2C98A58839A8</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_operador" id="42F84464-1BBC-AC73-30DA-61CF8EFB7385">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tipo de labor de mantenimiento  dentro de las instalaciones(preventivo,correctivo,locativo)]]></commentInRDBMS>
+<generatorID>B2A44F83-B3E2-D12D-6C26-E7D24C640F55</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC588233-FA2A-9840-9963-ED129EF4FA27" name="OPERADOR_PK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>C334276D-E254-19F8-C469-49D536151974</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C37D9F0A-AE79-1639-9E36-66171E4E0377"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98BCFA69-EB9E-8E3E-1458-758894854A88" name="OPERADOR_PERSONA_FK">
+<createdBy>dsant</createdBy>
+<createdTime>2026-05-06 07:09:30 UTC</createdTime>
+<generatorID>3BC33DE5-69F5-3E2D-7BB1-4AC729CE86D7</generatorID>
+<ownerDesignName>Modelo_software_PBD1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C37D9F0A-AE79-1639-9E36-66171E4E0377"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
