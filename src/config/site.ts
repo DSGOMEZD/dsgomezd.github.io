@@ -8,7 +8,7 @@ export const siteConfig = {
   // Navigation
   navigation: {
     home: "Presentacion",
-    posts: "Evidecias",
+    posts: "Contenido",
     contact: "Contacto",
   },
   
@@ -16,10 +16,10 @@ export const siteConfig = {
   hero: {
     prefix: "yo soy",
     name: "David Santiago Gomez Duran",
-    intro: "Soy un estudiante de ingenieria de sistemas, Actualmente Estudio en la universidad del bosque, voy en 4 semestre y este es mi portafolio de evidencias y contenido para Bases de datos I",
+    intro: "Soy un estudiante de ingenieria de sistemas, Actualmente Estudio en la universidad del bosque, voy en 4 semestre y este es mi portafolio de evidencias y contenido para Bases de Datos II",
     avatar: "/image/Foto Santiago.jpg",
     buttons: {
-      viewPosts: "Ver Evidencias",
+      viewPosts: "Ver Contenido",
       contactMe: "Contactame",
     },
     socialLinks: [
@@ -85,8 +85,8 @@ export const siteConfig = {
   
   // Posts Page
   posts: {
-    title: "Evidencias",
-    subtitle: "Evidencias Bases de datos I",
+    title: "Contenido",
+    subtitle: "Contenido Bases de Datos II",
     searchPlaceholder: "Buscar Evidencia...",
   },
   

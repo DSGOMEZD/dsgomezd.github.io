@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Evidencias — Bases de Datos I</title>
+    <title>Contenido — Bases de Datos II</title>
   </head>
 
   <body>
@@ -22,527 +22,164 @@ import Footer from "../components/Footer.astro";
       <div class="posts-container page-content">
 
         <div class="posts-header posts-header-animate">
-          <h1 class="posts-title">Evidencias BD I</h1>
-          <p class="posts-subtitle">Bases de Datos I · Universidad del Bosque · 2025-1</p>
+          <h1 class="posts-title">Contenido BD II</h1>
+          <p class="posts-subtitle">Bases de Datos II · Universidad del Bosque · 2025-2</p>
         </div>
 
         <div class="ev-grid posts-content-animate">
 
-          <!-- ══ 01 MODELO ENTIDAD RELACIÓN Y MERE ══════════════════ -->
-          <section class="ev-card" id="mer">
-            <button class="ev-hdr" style="--mc:#76cfc5">
+          <!-- ══ 01 REPASO SQL AVANZADO ════════════════════════ -->
+          <section class="ev-card" id="sql-repaso">
+            <button class="ev-hdr" style="--mc:#10b981">
               <span class="ev-badge">01</span>
-              <span class="ev-ttl">Modelo Entidad Relación y MERE</span>
-              <span class="ev-count">6 archivos</span>
+              <span class="ev-ttl">Repaso SQL Avanzado</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Representación gráfica de entidades, atributos y relaciones de una base de datos.
-                El Modelo Extendido (MERE) añade conceptos de especialización, generalización y
-                agregación para representar estructuras más complejas.
+                Profundización en SQL más allá de los fundamentos: subconsultas correlacionadas,
+                expresiones de tabla comunes (CTEs con WITH), window functions como ROW_NUMBER,
+                RANK, LAG y LEAD con PARTITION BY, y JOINs avanzados con múltiples tablas.
+                Base sólida antes de adentrarnos en el mundo NoSQL.
               </p>
-              <div class="file-list">
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Taller Grupal — Primer Taller Entregado</span>
-                  <span class="ftag taller">Taller Grupal</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/EJERCICIOS%20TALLER%20GRUPAL.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/EJERCICIOS%20TALLER%20GRUPAL.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Taller Grupal MER"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Modelo Aerolínea</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/MODELO%20AEROLINEA.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/MODELO%20AEROLINEA.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Modelo Aerolínea"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Modelo Hospital</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/MODELO%20HOSPITAL.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/MODELO%20HOSPITAL.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Modelo Hospital"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Taller MER E-R</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/TALLER%20MER%20E-R.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/TALLER%20MER%20E-R.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Taller MER E-R"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Taller MER V4</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/TALLER%20MER_V4.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/TALLER%20MER_V4.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Taller MER V4"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Taller MERE V3 — Modelo Extendido</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/01-modelo-entidad-relacion/Taller_MERE_v3.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/01-modelo-entidad-relacion/Taller_MERE_v3.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Taller MERE V3"></iframe>
-                  </div>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 02 MODELO RELACIONAL ══════════════════════════════ -->
-          <section class="ev-card" id="relacional">
-            <button class="ev-hdr" style="--mc:#4a9af5">
+          <!-- ══ 02 INTRODUCCIÓN A NOSQL ═══════════════════════ -->
+          <section class="ev-card" id="nosql-intro">
+            <button class="ev-hdr" style="--mc:#38bdf8">
               <span class="ev-badge">02</span>
-              <span class="ev-ttl">Modelo Relacional</span>
-              <span class="ev-count">1 archivo</span>
+              <span class="ev-ttl">Introducción a Bases de Datos NoSQL</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Transformación del modelo conceptual a tablas con claves primarias, foráneas y
-                restricciones de integridad. Los ejercicios se trabajan en software especializado
-                de modelado relacional — descomprime el archivo para acceder a ellos.
+                Panorama general del ecosistema NoSQL: diferencias con el modelo relacional,
+                Teorema CAP (Consistency, Availability, Partition tolerance), BASE vs ACID,
+                y clasificación de los cuatro tipos principales: documentales, clave-valor,
+                columnares y grafos. Cuándo elegir NoSQL sobre SQL y viceversa.
               </p>
-              <div class="file-list">
-
-                <div class="file-row">
-                  <span class="ftype zip">ZIP</span>
-                  <span class="fname">Ejercicios en Software — Modelo Relacional</span>
-                  <span class="ftag ejercicio">Ejercicios</span>
-                  <div class="fbtns">
-                    <a class="btn-dl" href="/evidencias/02-modelo-relacional/EJERCICIO%20TODOS.zip" download>↓ Descargar</a>
-                  </div>
-                  <p class="file-note">Descomprime el ZIP y abre los archivos en el software de modelado relacional para visualizar los ejercicios.</p>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 03 NORMALIZACIÓN ══════════════════════════════════ -->
-          <section class="ev-card" id="normalizacion">
-            <button class="ev-hdr" style="--mc:#9b59b6">
+          <!-- ══ 03 MONGODB — CRUD Y MODELADO ═════════════════ -->
+          <section class="ev-card" id="mongodb-crud">
+            <button class="ev-hdr" style="--mc:#a78bfa">
               <span class="ev-badge">03</span>
-              <span class="ev-ttl">Normalización</span>
-              <span class="ev-count">4 archivos</span>
+              <span class="ev-ttl">MongoDB — CRUD y Modelado de Documentos</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Proceso sistemático de organización de datos para reducir redundancia y eliminar
-                dependencias anómalas. Se trabajan las formas normales 1FN, 2FN, 3FN y BCNF,
-                aplicadas a casos reales de hospital y universidad.
+                Primeros pasos con MongoDB: colecciones vs tablas, documentos BSON vs filas.
+                Operaciones CRUD completas — insertOne/insertMany, find con filtros y proyecciones,
+                update con operadores ($set, $inc, $push, $pull) y operaciones de eliminación.
+                Diseño de esquemas: documentos embebidos vs referencias, cuándo desnormalizar.
               </p>
-              <div class="file-list">
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Proceso de Normalización — Ejercicio Hospital</span>
-                  <span class="ftag taller">Taller</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/03-normalizacion/PROCESO%20DE%20NORMALIZACI%C3%93N%20EJERCICIO%20HOSPITAL.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/03-normalizacion/PROCESO%20DE%20NORMALIZACI%C3%93N%20EJERCICIO%20HOSPITAL.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Normalización Hospital"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Proceso de Normalización — Ejercicio Universidad</span>
-                  <span class="ftag taller">Taller</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/03-normalizacion/PROCESO%20DE%20NORMALIZACI%C3%93N%20EJERCICIO%20UNIVERSIDAD.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/03-normalizacion/PROCESO%20DE%20NORMALIZACI%C3%93N%20EJERCICIO%20UNIVERSIDAD.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Normalización Universidad"></iframe>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype xls">XLS</span>
-                  <span class="fname">Taller Normalización — Corregido</span>
-                  <span class="ftag taller">Taller</span>
-                  <div class="fbtns">
-                    <a class="btn-dl" href="/evidencias/03-normalizacion/TALLER%20NORMALIZACION(CORREGIDO)%20(2).xlsx" download>↓ Descargar</a>
-                  </div>
-                </div>
-
-                <div class="file-row">
-                  <span class="ftype csv">CSV</span>
-                  <span class="fname">Banco de Ejercicios de Normalización</span>
-                  <span class="ftag practica">Práctica</span>
-                  <div class="fbtns">
-                    <a class="btn-dl" href="/evidencias/03-normalizacion/Ejercicios%20Normalizacion.csv" download>↓ Descargar</a>
-                  </div>
-                  <p class="file-note">Contiene múltiples ejercicios de práctica en formato tabla, abre con Excel o Google Sheets.</p>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 04 ÁLGEBRA RELACIONAL ═════════════════════════════ -->
-          <section class="ev-card" id="algebra">
-            <button class="ev-hdr" style="--mc:#e67e22">
+          <!-- ══ 04 MONGODB — AGGREGATION FRAMEWORK ═══════════ -->
+          <section class="ev-card" id="mongodb-aggregation">
+            <button class="ev-hdr" style="--mc:#fb923c">
               <span class="ev-badge">04</span>
-              <span class="ev-ttl">Álgebra Relacional</span>
-              <span class="ev-count">1 archivo</span>
+              <span class="ev-ttl">MongoDB — Aggregation Framework</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Conjunto de operaciones formales sobre relaciones: selección (σ), proyección (π),
-                unión (∪), diferencia (−), producto cartesiano (×) y join (⋈). Base matemática
-                para el lenguaje SQL.
+                El poder real de MongoDB: pipelines de agregación con los stages más importantes.
+                $match (filtrado), $group (agrupación como GROUP BY), $project (proyección y
+                transformación), $sort y $limit, $lookup (JOIN entre colecciones), $unwind
+                para descomponer arrays y $addFields. Comparativa directa con su equivalente SQL.
               </p>
-              <div class="file-list">
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Taller Álgebra Relacional</span>
-                  <span class="ftag taller">Taller</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/04-algebra-relacional/Taller_Algebra_Relacional.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/04-algebra-relacional/Taller_Algebra_Relacional.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Taller Álgebra Relacional"></iframe>
-                  </div>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 05 SCRIPTS SQL ════════════════════════════════════ -->
-          <section class="ev-card" id="sql">
-            <button class="ev-hdr" style="--mc:#27ae60">
+          <!-- ══ 05 PL/SQL Y PROGRAMACIÓN DE BD ═══════════════ -->
+          <section class="ev-card" id="plsql">
+            <button class="ev-hdr" style="--mc:#34d399">
               <span class="ev-badge">05</span>
-              <span class="ev-ttl">Scripts SQL</span>
-              <span class="ev-count">1 archivo</span>
+              <span class="ev-ttl">PL/SQL y Programación de Bases de Datos</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Lenguaje estándar para la definición (DDL), manipulación (DML) y control (DCL)
-                de datos en sistemas relacionales. Compilado completo de scripts desarrollados
-                y ejecutados durante las sesiones de clase.
+                Programación procedural dentro del motor de base de datos: bloques PL/SQL
+                anónimos, stored procedures con parámetros IN/OUT/IN-OUT, funciones almacenadas,
+                cursores explícitos e implícitos, triggers BEFORE/AFTER para auditoría y
+                validación, manejo de excepciones y organización en paquetes. Implementación en Oracle.
               </p>
-              <div class="file-list">
-
-                <div class="file-row">
-                  <span class="ftype pdf">PDF</span>
-                  <span class="fname">Scripts SQL — Compilado de Clase</span>
-                  <span class="ftag ref">Referencia</span>
-                  <div class="fbtns">
-                    <button class="btn-prev" data-src="/evidencias/05-scripts-sql/SCRIPTS%20SQL.pdf">Vista Previa</button>
-                    <a class="btn-dl" href="/evidencias/05-scripts-sql/SCRIPTS%20SQL.pdf" download>↓ Descargar</a>
-                  </div>
-                  <div class="pdf-wrap" hidden>
-                    <iframe class="pdf-fr" title="Scripts SQL"></iframe>
-                  </div>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 06 MODELOS PROYECTO (TODA LA CLASE) ═══════════════ -->
-          <section class="ev-card" id="modelos-clase">
-            <button class="ev-hdr" style="--mc:#e91e8c">
+          <!-- ══ 06 INDEXACIÓN Y OPTIMIZACIÓN ═════════════════ -->
+          <section class="ev-card" id="indexacion">
+            <button class="ev-hdr" style="--mc:#f472b6">
               <span class="ev-badge">06</span>
-              <span class="ev-ttl">Modelos del Proyecto — Toda la Clase</span>
-              <span class="ev-count">1 enlace</span>
+              <span class="ev-ttl">Indexación y Optimización de Consultas</span>
+              <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Modelos conceptuales y relacionales desarrollados de forma colaborativa por todo
-                el grupo durante el semestre. Incluye los diagramas del Modelo Entidad-Relación
-                elaborados en conjunto en Draw.io.
+                Cómo los motores de BD ejecutan consultas internamente: planes de ejecución con
+                EXPLAIN y EXPLAIN ANALYZE, tipos de índices B-Tree, Hash, compuestos y parciales
+                en SQL, e índices simples, compuestos, de texto y geoespaciales en MongoDB.
+                Estrategias: evitar full scans, selectividad, índices cubrientes y estadísticas
+                del optimizador.
               </p>
-              <div class="file-list">
-
-                <div class="file-row link-row">
-                  <span class="ftype lnk">LINK</span>
-                  <span class="fname">Diagrama MER Colaborativo — Draw.io</span>
-                  <span class="ftag colab">Colaborativo</span>
-                  <div class="fbtns">
-                    <a class="btn-ext" href="https://app.diagrams.net/#G1n0KUsF-P7YeSn3PlNEnPnecMFY2kuSXQ#%7B%22pageId%22%3A%22iXLh9eBu8gFIoPICc3FG%22%7D" target="_blank" rel="noopener noreferrer">Abrir en Draw.io ↗</a>
-                  </div>
-                </div>
-
+              <div class="placeholder-msg">
+                <span class="placeholder-icon">📂</span>
+                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
               </div>
             </div>
           </section>
 
-          <!-- ══ 07 PROYECTO FINAL: UB-DEPORTE ═════════════════════ -->
+          <!-- ══ 07 PROYECTO FINAL BD2 ════════════════════════ -->
           <section class="ev-card ev-card-proyecto" id="proyecto">
             <button class="ev-hdr ev-hdr-proyecto">
               <span class="ev-badge ev-badge-proyecto">07</span>
-              <span class="ev-ttl">Proyecto Final — UB-Deporte</span>
-              <span class="ev-count">14 entregables</span>
+              <span class="ev-ttl">Proyecto Final — BD2</span>
+              <span class="ev-count">En desarrollo</span>
               <span class="ev-chevron ev-chevron-proyecto">▼</span>
             </button>
             <div class="ev-body">
-
               <p class="ev-desc ev-desc-proyecto">
-                Sistema de gestión deportiva para la Universidad del Bosque. Proyecto integrador
-                que cubre el ciclo completo: modelado conceptual, diseño relacional, normalización,
-                álgebra relacional, selección de RDBMS e implementación en producción.
+                Proyecto integrador del semestre: diseño e implementación de una solución de
+                datos completa usando bases de datos relacionales y NoSQL de forma complementaria.
+                Incluirá modelado conceptual, implementación, optimización y análisis comparativo
+                de ambos paradigmas aplicados a un caso real de ingeniería.
               </p>
-
-              <!-- Video demo -->
-              <div class="yt-wrap">
-                <iframe
-                  class="yt-frame"
-                  src="https://www.youtube.com/embed/d-I0SLjs_gE"
-                  title="Video Proyecto UB-Deporte"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+              <div class="placeholder-msg placeholder-proyecto">
+                <span class="placeholder-icon">🚀</span>
+                <p>Proyecto en desarrollo — los entregables se publicarán durante el semestre.</p>
               </div>
-
-              <!-- External links row -->
-              <div class="ext-links">
-                <a class="ext-card github" href="https://github.com/MarianaDuran2903/BD-Final" target="_blank" rel="noopener noreferrer">
-                  <span class="ext-icon">&#128279;</span>
-                  Repo Backend
-                </a>
-                <a class="ext-card github" href="https://github.com/dsantiagogduran7/BD-Front" target="_blank" rel="noopener noreferrer">
-                  <span class="ext-icon">&#128279;</span>
-                  Repo Frontend
-                </a>
-                <a class="ext-card lucid" href="https://lucid.app/lucidchart/6eb6e986-3399-4164-9a79-b51431519506/edit?viewport_loc=539%2C-1301%2C4977%2C2255%2C0_0&invitationId=inv_7b55cb96-c8a3-47bb-bd8e-b229bf82fba8" target="_blank" rel="noopener noreferrer">
-                  <span class="ext-icon">&#128279;</span>
-                  Modelo MERE — Lucidchart
-                </a>
-              </div>
-
-              <!-- ── Entregables Transversales -->
-              <div class="phases">
-                <div class="phase">
-                  <div class="phase-hdr">Entregables Transversales</div>
-                  <div class="file-list phase-files">
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Acta de Constitución</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/Acta%20de%20Constituci%C3%B3n%20UB-Deporte.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/Acta%20de%20Constituci%C3%B3n%20UB-Deporte.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Acta de Constitución"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Acta de Cierre del Proyecto</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/Acta_Cierre_Proyecto_UB_DEPORTE.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/Acta_Cierre_Proyecto_UB_DEPORTE.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Acta de Cierre"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">EDT / WBS del Proyecto</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/EDT_WBS_UB-Deporte.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Entregables%20Transversales/EDT_WBS_UB-Deporte.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="EDT WBS"></iframe>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <!-- ── Fase 1 -->
-                <div class="phase">
-                  <div class="phase-hdr">Fase 1 — Modelado Conceptual</div>
-                  <div class="file-list phase-files">
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Álgebra Relacional — UB-Deportes</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Algebra_Relacional_UB-Deportes.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Algebra_Relacional_UB-Deportes.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Álgebra Relacional UB-Deportes"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Diccionario de Datos</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Diccionario_Datos_UB_Deporte.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Diccionario_Datos_UB_Deporte.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Diccionario de Datos"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Documento de Propuesta del Proyecto</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Documento%20de%20Propuesta%20del%20Proyecto.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Documento%20de%20Propuesta%20del%20Proyecto.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Documento de Propuesta"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Documento de Supuestos</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Documento%20de%20Supuestos.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Documento%20de%20Supuestos.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Documento de Supuestos"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype dmd">DMD</span>
-                      <span class="fname">Modelo en Software — Oracle Data Modeler</span>
-                      <div class="fbtns">
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%201/Modelos%20Software/Modelo_software_PBD1.dmd" download>↓ Descargar</a>
-                      </div>
-                      <p class="file-note">Requiere Oracle SQL Developer Data Modeler para abrirse.</p>
-                    </div>
-
-                  </div>
-                </div>
-
-                <!-- ── Fase 2 -->
-                <div class="phase">
-                  <div class="phase-hdr">Fase 2 — Implementación</div>
-                  <div class="file-list phase-files">
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Análisis — Sistema Operativo Seleccionado</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20An%C3%A1lisis%20de%20Sistema%20Operativo%20Seleccionado.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20An%C3%A1lisis%20de%20Sistema%20Operativo%20Seleccionado.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Análisis SO"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Análisis — Selección de RDBMS</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20An%C3%A1lisis%20de%20selecci%C3%B3n%20de%20RDBMS.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20An%C3%A1lisis%20de%20selecci%C3%B3n%20de%20RDBMS.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Análisis RDBMS"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Documento de Implementación de la VM</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20implementaci%C3%B3n%20de%20la%20VM.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20implementaci%C3%B3n%20de%20la%20VM.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Implementación VM"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype pdf">PDF</span>
-                      <span class="fname">Documento de Implementación del RDBMS</span>
-                      <div class="fbtns">
-                        <button class="btn-prev" data-src="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20implementaci%C3%B3n%20del%20RDBMS.pdf">Vista Previa</button>
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Documento%20de%20implementaci%C3%B3n%20del%20RDBMS.pdf" download>↓ Descargar</a>
-                      </div>
-                      <div class="pdf-wrap" hidden>
-                        <iframe class="pdf-fr" title="Implementación RDBMS"></iframe>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype sql">SQL</span>
-                      <span class="fname">Script DDL — Definición de Tablas</span>
-                      <div class="fbtns">
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Scripts%20Implementacion/ub_deporte_ddl.sql" download>↓ Descargar</a>
-                      </div>
-                    </div>
-
-                    <div class="file-row">
-                      <span class="ftype sql">SQL</span>
-                      <span class="fname">Script Inserts — Datos de Prueba</span>
-                      <div class="fbtns">
-                        <a class="btn-dl" href="/evidencias/07-proyecto/PROYECTO_FINAL_BD1/Fase%202/Scripts%20Implementacion/ub_deporte_inserts.sql" download>↓ Descargar</a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div><!-- /phases -->
-
             </div>
           </section>
 
@@ -567,13 +204,13 @@ import Footer from "../components/Footer.astro";
 .ev-card {
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  background: #fff;
-  border: 1px solid #e8edf2;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+  background: #243447;
+  border: 1px solid #2d4a64;
   transition: box-shadow 0.25s;
 }
 .ev-card:hover {
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
 }
 
 /* ── Card header (button) ────────────────────────────────── */
@@ -585,29 +222,29 @@ import Footer from "../components/Footer.astro";
   padding: 1.05rem 1.4rem;
   background: linear-gradient(
     to right,
-    color-mix(in srgb, var(--mc) 12%, white) 0%,
-    white 70%
+    color-mix(in srgb, var(--mc) 20%, #1e293b) 0%,
+    #243447 70%
   );
   border: none;
   cursor: pointer;
   text-align: left;
-  border-left: 5px solid var(--mc, #76cfc5);
+  border-left: 5px solid var(--mc, #10b981);
   transition: background 0.2s;
 }
 .ev-hdr:hover {
   background: linear-gradient(
     to right,
-    color-mix(in srgb, var(--mc) 22%, white) 0%,
-    #f8fbff 70%
+    color-mix(in srgb, var(--mc) 32%, #1e293b) 0%,
+    #1e3050 70%
   );
 }
 .ev-card.open > .ev-hdr {
-  border-bottom: 1px solid #e8edf2;
+  border-bottom: 1px solid #2d4a64;
 }
 
 /* ── Badge (number) ──────────────────────────────────────── */
 .ev-badge {
-  background: var(--mc, #76cfc5);
+  background: var(--mc, #10b981);
   color: #fff;
   font-weight: 800;
   font-size: 0.8rem;
@@ -622,26 +259,26 @@ import Footer from "../components/Footer.astro";
 .ev-ttl {
   font-size: 1.08rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #f0f4f8;
   flex: 1;
 }
 
 /* ── File count chip ─────────────────────────────────────── */
 .ev-count {
   font-size: 0.78rem;
-  color: #718096;
+  color: #64748b;
   font-weight: 500;
   white-space: nowrap;
   padding: 0.18rem 0.55rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #2d4a64;
   border-radius: 10px;
-  background: #f7fafc;
+  background: #1e293b;
 }
 
 /* ── Chevron ─────────────────────────────────────────────── */
 .ev-chevron {
   font-size: 0.85rem;
-  color: var(--mc, #76cfc5);
+  color: var(--mc, #10b981);
   transition: transform 0.3s;
   flex-shrink: 0;
 }
@@ -661,243 +298,56 @@ import Footer from "../components/Footer.astro";
 /* ── Description box ─────────────────────────────────────── */
 .ev-desc {
   font-size: 0.97rem;
-  color: #4a5568;
+  color: rgba(248, 250, 252, 0.75);
   line-height: 1.75;
   margin-bottom: 1.2rem;
   padding: 0.85rem 1.1rem;
-  background: #f8fafc;
+  background: #1a2740;
   border-radius: 9px;
-  border-left: 3px solid #76cfc5;
+  border-left: 3px solid var(--mc, #10b981);
   max-width: 100%;
 }
 
-/* ── File list ───────────────────────────────────────────── */
-.file-list {
+/* ── Placeholder ─────────────────────────────────────────── */
+.placeholder-msg {
   display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-/* ── Individual file row ─────────────────────────────────── */
-.file-row {
-  background: #fdfdfe;
-  border: 1px solid #e8edf2;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.4rem 1.2rem;
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px dashed rgba(16, 185, 129, 0.25);
   border-radius: 10px;
-  padding: 0.8rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  flex-wrap: wrap;
-  transition: border-color 0.2s, background 0.2s;
-}
-.file-row:hover {
-  border-color: #cbd5e0;
-  background: #f7fafc;
-}
-
-/* ── File type badge ─────────────────────────────────────── */
-.ftype {
-  font-size: 0.67rem;
-  font-weight: 800;
-  padding: 0.22rem 0.48rem;
-  border-radius: 5px;
-  font-family: var(--font-mono);
-  flex-shrink: 0;
-  letter-spacing: 0.06em;
-}
-.ftype.pdf { background: #fff5f5; color: #c53030; border: 1px solid #fed7d7; }
-.ftype.zip { background: #fffbf0; color: #b7791f; border: 1px solid #fefcbf; }
-.ftype.xls { background: #f0fff4; color: #276749; border: 1px solid #c6f6d5; }
-.ftype.csv { background: #ebf8ff; color: #2c5282; border: 1px solid #bee3f8; }
-.ftype.sql { background: #faf5ff; color: #6b46c1; border: 1px solid #e9d8fd; }
-.ftype.lnk { background: #fff0f6; color: #97266d; border: 1px solid #fbb6ce; }
-.ftype.dmd { background: #f0f4ff; color: #3730a3; border: 1px solid #c7d2fe; }
-
-/* ── File name ───────────────────────────────────────────── */
-.fname {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #2d3748;
-  flex: 1;
-  min-width: 140px;
-}
-
-/* ── Label tags ──────────────────────────────────────────── */
-.ftag {
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.18rem 0.52rem;
-  border-radius: 9px;
-  flex-shrink: 0;
-  white-space: nowrap;
-  letter-spacing: 0.02em;
-}
-.ftag.taller    { background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
-.ftag.practica  { background: #f0fff4; color: #276749; border: 1px solid #c6f6d5; }
-.ftag.ejercicio { background: #fffbeb; color: #92400e; border: 1px solid #fefcbf; }
-.ftag.ref       { background: #faf5ff; color: #6b46c1; border: 1px solid #e9d8fd; }
-.ftag.colab     { background: #fff0f6; color: #97266d; border: 1px solid #fbb6ce; }
-
-/* ── Action buttons ──────────────────────────────────────── */
-.fbtns {
-  display: flex;
-  gap: 0.45rem;
-  flex-shrink: 0;
-}
-
-.btn-prev {
-  padding: 0.32rem 0.75rem;
-  font-size: 0.79rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1.5px solid #76cfc5;
-  color: #2e9e8e;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: var(--font-sans);
-  white-space: nowrap;
-}
-.btn-prev:hover {
-  background: #76cfc5;
-  color: #fff;
-}
-
-.btn-dl {
-  padding: 0.32rem 0.75rem;
-  font-size: 0.79rem;
-  font-weight: 600;
-  border-radius: 6px;
-  background: #76cfc5;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.2s;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-.btn-dl:hover { background: #5ab5a5; }
-
-.btn-ext {
-  padding: 0.32rem 0.8rem;
-  font-size: 0.79rem;
-  font-weight: 600;
-  border-radius: 6px;
-  background: #7026b9;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-.btn-ext:hover { background: #5b1e9e; }
-
-/* ── File note ───────────────────────────────────────────── */
-.file-note {
-  width: 100%;
-  font-size: 0.79rem;
-  color: #718096;
-  margin: 0.3rem 0 0 0;
+  color: rgba(248, 250, 252, 0.4);
+  font-size: 0.95rem;
   font-style: italic;
 }
-
-/* ── PDF embed wrapper ───────────────────────────────────── */
-.pdf-wrap {
-  width: 100%;
-  margin-top: 0.75rem;
-  border-radius: 8px;
-  overflow: hidden;
+.placeholder-msg p {
+  margin: 0;
+  max-width: none;
 }
-.pdf-fr {
-  width: 100%;
-  height: 520px;
-  border: none;
-  background: #f0f4f8;
-  display: block;
+.placeholder-icon {
+  font-size: 1.4rem;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
-
-/* ── YouTube embed ───────────────────────────────────────── */
-.yt-wrap {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  margin-bottom: 1.4rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.15);
-}
-.yt-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ── External link cards (repos / lucidchart) ────────────── */
-.ext-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-bottom: 1.4rem;
-}
-.ext-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.55rem 1.1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.88rem;
-  transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
-}
-.ext-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
-  filter: brightness(1.08);
-}
-.ext-card.github { background: #24292e; color: #fff; }
-.ext-card.lucid  { background: linear-gradient(90deg, #e91e8c, #7026b9); color: #fff; }
-.ext-icon { font-size: 1.05rem; }
-
-/* ── Phases container ────────────────────────────────────── */
-.phases {
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-.phase {
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #e8edf2;
-}
-.phase-hdr {
-  padding: 0.65rem 1.1rem;
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: #fff;
-  background: linear-gradient(90deg, #ec6664 0%, #ffb400 100%);
-  letter-spacing: 0.04em;
-}
-.phase-files {
-  padding: 0.75rem;
-  background: #fff;
+.placeholder-proyecto {
+  background: rgba(251, 146, 60, 0.04);
+  border-color: rgba(251, 146, 60, 0.25);
 }
 
 /* ── Proyecto card special styling ───────────────────────── */
 .ev-hdr-proyecto {
-  background: linear-gradient(to right, #fff3ee 0%, #fff8f5 40%, #fff 100%);
-  border-left-color: #ec6664;
+  background: linear-gradient(to right, color-mix(in srgb, #fb923c 22%, #1e293b) 0%, #243447 100%);
+  border-left-color: #fb923c;
 }
 .ev-hdr-proyecto:hover {
-  background: linear-gradient(to right, #ffe8de 0%, #fff4f0 40%, #fff 100%);
+  background: linear-gradient(to right, color-mix(in srgb, #fb923c 35%, #1e293b) 0%, #1e3050 100%);
 }
 .ev-badge-proyecto {
-  background: linear-gradient(90deg, #ec6664, #ffb400);
+  background: linear-gradient(90deg, #fb923c, #38bdf8);
 }
-.ev-chevron-proyecto { color: #ec6664; }
-.ev-desc-proyecto { border-left-color: #ec6664; }
+.ev-chevron-proyecto { color: #fb923c; }
+.ev-desc-proyecto { border-left-color: #fb923c; }
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {
@@ -905,10 +355,6 @@ import Footer from "../components/Footer.astro";
   .ev-body { padding: 1rem; }
   .ev-ttl  { font-size: 0.97rem; }
   .ev-count { display: none; }
-  .fname   { font-size: 0.85rem; min-width: 100px; }
-  .fbtns   { gap: 0.3rem; }
-  .ext-links { flex-direction: column; }
-  .pdf-fr  { height: 380px; }
 }
 </style>
 
@@ -919,27 +365,9 @@ import Footer from "../components/Footer.astro";
     document.querySelectorAll(".posts-header-animate, .posts-content-animate")
       .forEach((el) => el.classList.add("visible"));
 
-    // Accordion
     document.querySelectorAll(".ev-hdr").forEach((btn) => {
       btn.addEventListener("click", () => {
         btn.closest(".ev-card")?.classList.toggle("open");
-      });
-    });
-
-    // PDF preview — lazy loads src only when first opened
-    document.querySelectorAll(".btn-prev").forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const row  = btn.closest(".file-row");
-        const wrap = row ? row.querySelector(".pdf-wrap") : null;
-        const fr   = wrap ? wrap.querySelector(".pdf-fr") : null;
-        if (!wrap || !fr) return;
-        const closing = !wrap.hidden;
-        wrap.hidden = closing;
-        if (!closing && !fr.src) {
-          fr.src = btn.dataset.src || "";
-        }
-        btn.textContent = closing ? "Vista Previa" : "Cerrar";
       });
     });
   });
