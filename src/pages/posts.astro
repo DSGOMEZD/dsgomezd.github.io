@@ -1,9 +1,43 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import "../styles/home.css";
 import "../styles/posts.css";
 import "../styles/page-transitions.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import SqlPreview from "../components/SqlPreview.astro";
+import PdfPreview from "../components/PdfPreview.astro";
+
+const PUBLIC_DIR = path.join(process.cwd(), "public");
+
+function sqlPreview(relPath: string, lines = 14) {
+  const filePath = path.join(PUBLIC_DIR, relPath);
+  const content = fs.readFileSync(filePath, "utf-8");
+  const allLines = content.split("\n");
+  let preview = allLines.slice(0, lines).join("\n").trimEnd();
+  if (allLines.length > lines) preview += "\n...";
+  return { preview, totalLines: allLines.length, url: "/" + relPath };
+}
+
+function pdfInfo(relPath: string) {
+  const filePath = path.join(PUBLIC_DIR, relPath);
+  const stat = fs.statSync(filePath);
+  const sizeMB = stat.size / (1024 * 1024);
+  const size = sizeMB >= 1 ? `${sizeMB.toFixed(1)} MB` : `${Math.round(stat.size / 1024)} KB`;
+  return { url: "/" + relPath, size };
+}
+
+const repasoSql = sqlPreview("evidencias/bd2/01-repaso-sql/REPASO_SQL.sql");
+const avanzadoSql = sqlPreview("evidencias/bd2/02-sql-avanzado/SQL_AVANZADO.sql");
+const transaccionesSql = sqlPreview("evidencias/bd2/03-transacciones/TRANSACCIONES.sql");
+const optimizacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/OPTIMIZACION.sql");
+const indexacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/INDEXACION.sql");
+const tallerSql = sqlPreview("evidencias/bd2/05-talleres/SQL_completos.sql", 16);
+const tallerPdf = pdfInfo("evidencias/bd2/05-talleres/Taller_BD2_MercaAndes_Respuestas.pdf");
+const modeloPdf = pdfInfo("evidencias/bd2/08-proyecto/Modelo_de_datos_BD2.pdf");
+const motogoSistemaPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Sistema_Gestion_Alquiler_Motocicletas.pdf");
+const motogoSupuestosPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Supuestos_Desarrollo_Proyecto.pdf");
 ---
 
 <html lang="es">
@@ -28,86 +62,119 @@ import Footer from "../components/Footer.astro";
 
         <div class="ev-grid posts-content-animate">
 
-          <!-- ══ 01 REPASO SQL AVANZADO ════════════════════════ -->
+          <!-- ══ 01 REPASO SQL ═════════════════════════════════ -->
           <section class="ev-card" id="sql-repaso">
             <button class="ev-hdr" style="--mc:#10b981">
               <span class="ev-badge">01</span>
-              <span class="ev-ttl">Repaso SQL Avanzado</span>
-              <span class="ev-count">Próximamente</span>
+              <span class="ev-ttl">Repaso SQL</span>
+              <span class="ev-count">1 script SQL</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Profundización en SQL más allá de los fundamentos: subconsultas correlacionadas,
-                expresiones de tabla comunes (CTEs con WITH), window functions como ROW_NUMBER,
-                RANK, LAG y LEAD con PARTITION BY, y JOINs avanzados con múltiples tablas.
-                Base sólida antes de adentrarnos en el mundo NoSQL.
+                Repaso de SQL fundamental sobre el esquema HR de Oracle: SELECT, WHERE, NULL,
+                funciones de texto/numéricas/fecha, agregaciones, GROUP BY/HAVING, todos los
+                tipos de JOIN (INNER, LEFT, RIGHT, FULL, SELF, CROSS), CASE, DECODE, subconsultas,
+                EXISTS/IN, operadores de conjuntos (UNION, INTERSECT, MINUS) y vistas.
               </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
-              </div>
+              <SqlPreview preview={repasoSql.preview} totalLines={repasoSql.totalLines} url={repasoSql.url} />
             </div>
           </section>
 
-          <!-- ══ 02 INTRODUCCIÓN A NOSQL ═══════════════════════ -->
-          <section class="ev-card" id="nosql-intro">
+          <!-- ══ 02 SQL AVANZADO ═══════════════════════════════ -->
+          <section class="ev-card" id="sql-avanzado">
             <button class="ev-hdr" style="--mc:#38bdf8">
               <span class="ev-badge">02</span>
-              <span class="ev-ttl">Introducción a Bases de Datos NoSQL</span>
-              <span class="ev-count">Próximamente</span>
+              <span class="ev-ttl">SQL Avanzado</span>
+              <span class="ev-count">1 script SQL</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Panorama general del ecosistema NoSQL: diferencias con el modelo relacional,
-                Teorema CAP (Consistency, Availability, Partition tolerance), BASE vs ACID,
-                y clasificación de los cuatro tipos principales: documentales, clave-valor,
-                columnares y grafos. Cuándo elegir NoSQL sobre SQL y viceversa.
+                Expresiones de tabla comunes (CTE) simples y recursivas, funciones de ventana
+                (ROW_NUMBER, RANK, DENSE_RANK, LAG/LEAD), acumulados y promedios móviles,
+                RATIO_TO_REPORT, PERCENT_RANK, CUME_DIST y NTILE, jerarquías con CONNECT BY,
+                PIVOT, LISTAGG, FETCH WITH TIES y MERGE, comparando soluciones con subconsultas
+                frente a funciones analíticas.
               </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
-              </div>
+              <SqlPreview preview={avanzadoSql.preview} totalLines={avanzadoSql.totalLines} url={avanzadoSql.url} />
             </div>
           </section>
 
-          <!-- ══ 03 MONGODB — CRUD Y MODELADO ═════════════════ -->
-          <section class="ev-card" id="mongodb-crud">
-            <button class="ev-hdr" style="--mc:#a78bfa">
+          <!-- ══ 03 TRANSACCIONES ══════════════════════════════ -->
+          <section class="ev-card" id="transacciones">
+            <button class="ev-hdr" style="--mc:#f472b6">
               <span class="ev-badge">03</span>
-              <span class="ev-ttl">MongoDB — CRUD y Modelado de Documentos</span>
-              <span class="ev-count">Próximamente</span>
+              <span class="ev-ttl">Transacciones</span>
+              <span class="ev-count">1 script SQL</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                Primeros pasos con MongoDB: colecciones vs tablas, documentos BSON vs filas.
-                Operaciones CRUD completas — insertOne/insertMany, find con filtros y proyecciones,
-                update con operadores ($set, $inc, $push, $pull) y operaciones de eliminación.
-                Diseño de esquemas: documentos embebidos vs referencias, cuándo desnormalizar.
+                Control transaccional en Oracle: COMMIT, ROLLBACK y SAVEPOINT, niveles de
+                aislamiento READ COMMITTED y SERIALIZABLE, transacciones READ ONLY,
+                SELECT ... FOR UPDATE con NOWAIT/WAIT, y prácticas de bloqueos, concurrencia
+                y deadlocks usando dos sesiones simultáneas.
               </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
-              </div>
+              <SqlPreview preview={transaccionesSql.preview} totalLines={transaccionesSql.totalLines} url={transaccionesSql.url} />
             </div>
           </section>
 
-          <!-- ══ 04 MONGODB — AGGREGATION FRAMEWORK ═══════════ -->
-          <section class="ev-card" id="mongodb-aggregation">
+          <!-- ══ 04 OPTIMIZACIÓN E INDEXACIÓN ══════════════════ -->
+          <section class="ev-card" id="indexacion">
             <button class="ev-hdr" style="--mc:#fb923c">
               <span class="ev-badge">04</span>
-              <span class="ev-ttl">MongoDB — Aggregation Framework</span>
+              <span class="ev-ttl">Optimización e Indexación de Consultas</span>
+              <span class="ev-count">2 scripts SQL</span>
+              <span class="ev-chevron">▼</span>
+            </button>
+            <div class="ev-body">
+              <p class="ev-desc">
+                Cómo el motor ejecuta las consultas por dentro: EXPLAIN PLAN y DBMS_XPLAN,
+                costo y cardinalidad (E-Rows/A-Rows), GATHER_PLAN_STATISTICS, SARGabilidad,
+                JOIN vs subconsulta, EXISTS, UNION vs UNION ALL. Y del lado de índices: simples,
+                compuestos, function-based, selectividad, estadísticas con DBMS_STATS, índices
+                invisibles y medición de rendimiento antes/después.
+              </p>
+              <SqlPreview label="SQL · Optimización" preview={optimizacionSql.preview} totalLines={optimizacionSql.totalLines} url={optimizacionSql.url} />
+              <SqlPreview label="SQL · Indexación" preview={indexacionSql.preview} totalLines={indexacionSql.totalLines} url={indexacionSql.url} />
+            </div>
+          </section>
+
+          <!-- ══ 05 TALLERES ═══════════════════════════════════ -->
+          <section class="ev-card" id="talleres">
+            <button class="ev-hdr" style="--mc:#a78bfa">
+              <span class="ev-badge">05</span>
+              <span class="ev-ttl">Talleres</span>
+              <span class="ev-count">1 script + 1 PDF</span>
+              <span class="ev-chevron">▼</span>
+            </button>
+            <div class="ev-body">
+              <p class="ev-desc">
+                Taller integrador MercaAndes: control de concurrencia aplicado (actualizaciones
+                perdidas, bloqueo pesimista con SELECT ... FOR UPDATE, niveles de aislamiento)
+                resuelto sesión por sesión, con las respuestas razonadas de cada ejercicio y el
+                documento de entrega del taller.
+              </p>
+              <SqlPreview label="SQL · Taller MercaAndes" preview={tallerSql.preview} totalLines={tallerSql.totalLines} url={tallerSql.url} />
+              <PdfPreview title="Taller BD2 MercaAndes — Respuestas" url={tallerPdf.url} size={tallerPdf.size} />
+            </div>
+          </section>
+
+          <!-- ══ 06 NOSQL Y MONGODB ════════════════════════════ -->
+          <section class="ev-card" id="nosql-mongodb">
+            <button class="ev-hdr" style="--mc:#34d399">
+              <span class="ev-badge">06</span>
+              <span class="ev-ttl">NoSQL y MongoDB</span>
               <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc">
-                El poder real de MongoDB: pipelines de agregación con los stages más importantes.
-                $match (filtrado), $group (agrupación como GROUP BY), $project (proyección y
-                transformación), $sort y $limit, $lookup (JOIN entre colecciones), $unwind
-                para descomponer arrays y $addFields. Comparativa directa con su equivalente SQL.
+                Panorama general del ecosistema NoSQL (Teorema CAP, BASE vs ACID, tipos de bases
+                documentales, clave-valor, columnares y grafos) junto con MongoDB en la práctica:
+                CRUD completo sobre documentos BSON y pipelines de agregación ($match, $group,
+                $project, $lookup, $unwind). Se cubre hacia el final del semestre.
               </p>
               <div class="placeholder-msg">
                 <span class="placeholder-icon">📂</span>
@@ -116,10 +183,10 @@ import Footer from "../components/Footer.astro";
             </div>
           </section>
 
-          <!-- ══ 05 PL/SQL Y PROGRAMACIÓN DE BD ═══════════════ -->
+          <!-- ══ 07 PL/SQL ══════════════════════════════════════ -->
           <section class="ev-card" id="plsql">
-            <button class="ev-hdr" style="--mc:#34d399">
-              <span class="ev-badge">05</span>
+            <button class="ev-hdr" style="--mc:#facc15">
+              <span class="ev-badge">07</span>
               <span class="ev-ttl">PL/SQL y Programación de Bases de Datos</span>
               <span class="ev-count">Próximamente</span>
               <span class="ev-chevron">▼</span>
@@ -138,48 +205,25 @@ import Footer from "../components/Footer.astro";
             </div>
           </section>
 
-          <!-- ══ 06 INDEXACIÓN Y OPTIMIZACIÓN ═════════════════ -->
-          <section class="ev-card" id="indexacion">
-            <button class="ev-hdr" style="--mc:#f472b6">
-              <span class="ev-badge">06</span>
-              <span class="ev-ttl">Indexación y Optimización de Consultas</span>
-              <span class="ev-count">Próximamente</span>
-              <span class="ev-chevron">▼</span>
-            </button>
-            <div class="ev-body">
-              <p class="ev-desc">
-                Cómo los motores de BD ejecutan consultas internamente: planes de ejecución con
-                EXPLAIN y EXPLAIN ANALYZE, tipos de índices B-Tree, Hash, compuestos y parciales
-                en SQL, e índices simples, compuestos, de texto y geoespaciales en MongoDB.
-                Estrategias: evitar full scans, selectividad, índices cubrientes y estadísticas
-                del optimizador.
-              </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- ══ 07 PROYECTO FINAL BD2 ════════════════════════ -->
+          <!-- ══ 08 PROYECTO FINAL BD2 ═════════════════════════ -->
           <section class="ev-card ev-card-proyecto" id="proyecto">
             <button class="ev-hdr ev-hdr-proyecto">
-              <span class="ev-badge ev-badge-proyecto">07</span>
-              <span class="ev-ttl">Proyecto Final — BD2</span>
-              <span class="ev-count">En desarrollo</span>
+              <span class="ev-badge ev-badge-proyecto">08</span>
+              <span class="ev-ttl">Proyecto Final — MotoGo</span>
+              <span class="ev-count">3 PDF</span>
               <span class="ev-chevron ev-chevron-proyecto">▼</span>
             </button>
             <div class="ev-body">
               <p class="ev-desc ev-desc-proyecto">
-                Proyecto integrador del semestre: diseño e implementación de una solución de
-                datos completa usando bases de datos relacionales y NoSQL de forma complementaria.
-                Incluirá modelado conceptual, implementación, optimización y análisis comparativo
-                de ambos paradigmas aplicados a un caso real de ingeniería.
+                MotoGo: sistema para la gestión y alquiler flexible de motocicletas. Proyecto
+                integrador del semestre, combinando bases de datos relacionales y NoSQL. Por
+                ahora: el modelo de datos y los supuestos y alcance definidos para el desarrollo
+                del sistema. Faltan la implementación, optimización y el análisis comparativo
+                entre ambos paradigmas.
               </p>
-              <div class="placeholder-msg placeholder-proyecto">
-                <span class="placeholder-icon">🚀</span>
-                <p>Proyecto en desarrollo — los entregables se publicarán durante el semestre.</p>
-              </div>
+              <PdfPreview title="Modelo de datos — BD2" url={modeloPdf.url} size={modeloPdf.size} />
+              <PdfPreview title="MotoGo — Sistema para la Gestión y Alquiler de Motocicletas" url={motogoSistemaPdf.url} size={motogoSistemaPdf.size} />
+              <PdfPreview title="MotoGo — Supuestos para el Desarrollo del Proyecto" url={motogoSupuestosPdf.url} size={motogoSupuestosPdf.size} />
             </div>
           </section>
 
@@ -329,10 +373,6 @@ import Footer from "../components/Footer.astro";
   font-size: 1.4rem;
   opacity: 0.5;
   flex-shrink: 0;
-}
-.placeholder-proyecto {
-  background: rgba(251, 146, 60, 0.04);
-  border-color: rgba(251, 146, 60, 0.25);
 }
 
 /* ── Proyecto card special styling ───────────────────────── */

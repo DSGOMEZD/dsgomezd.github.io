@@ -1,0 +1,91 @@
+---
+interface Props {
+  label?: string;
+  preview: string;
+  totalLines: number;
+  url: string;
+}
+const { label = "SQL", preview, totalLines, url } = Astro.props;
+---
+
+<div class="sql-preview">
+  <div class="sql-preview-hdr">
+    <span class="sql-lang">{label}</span>
+    <span class="sql-lines">{totalLines} líneas</span>
+  </div>
+  <pre class="sql-block"><code>{preview}</code></pre>
+  <div class="sql-actions">
+    <a href={url} target="_blank" rel="noopener" class="ev-link">Ver script completo ↗</a>
+    <a href={url} download class="ev-link ev-link-ghost">Descargar .sql</a>
+  </div>
+</div>
+
+<style>
+  .sql-preview {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #2d4a64;
+    background: #0f1c2e;
+    margin-bottom: 1rem;
+  }
+  .sql-preview:last-child { margin-bottom: 0; }
+  .sql-preview-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.9rem;
+    background: #16263c;
+    border-bottom: 1px solid #2d4a64;
+  }
+  .sql-lang {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #10b981;
+  }
+  .sql-lines {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  .sql-block {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(248, 250, 252, 0.82);
+    white-space: pre;
+  }
+  .sql-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    border-top: 1px solid #2d4a64;
+    background: #16263c;
+  }
+  .ev-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #38bdf8;
+    text-decoration: none;
+    padding: 0.35rem 0.7rem;
+    border-radius: 7px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .ev-link:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.6);
+  }
+  .ev-link-ghost {
+    color: #64748b;
+    border-color: #2d4a64;
+  }
+  .ev-link-ghost:hover {
+    background: rgba(100, 116, 139, 0.1);
+    border-color: #64748b;
+  }
+</style>

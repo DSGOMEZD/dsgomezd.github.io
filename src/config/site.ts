@@ -15,7 +15,7 @@ export const siteConfig = {
   // Hero Section
   hero: {
     prefix: "yo soy",
-    name: "DAVID SANTIAGO GOMEZ DURAN",
+    name: "David Santiago Gomez Duran",
     intro: "Soy un estudiante de ingenieria de sistemas, Actualmente Estudio en la universidad del bosque, voy en 4 semestre y este es mi portafolio de evidencias y contenido para Bases de Datos II",
     avatar: "/image/Foto Santiago.jpg",
     buttons: {
