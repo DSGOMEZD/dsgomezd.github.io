@@ -1,7 +1,8 @@
 -- ================================================================
 -- REPASO 1 - SQL FUNDAMENTAL
--- Oracle HR + ejemplos generales
--- Basado en tus scripts de practica y ampliado donde faltaba contenido.
+-- Repaso con ejercicios que fui pidiendo a una IA para practicar,
+-- en vez de quedarme solo con la teoria de como funciona cada tema.
+-- Oracle HR + ejemplos generales.
 -- ================================================================
 
 -- 1. SELECT BASICO

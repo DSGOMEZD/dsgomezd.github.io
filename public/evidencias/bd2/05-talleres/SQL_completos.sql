@@ -1,5 +1,8 @@
 -- =====================================================================
 -- Bases de Datos 2 · Taller integrador — MercaAndes
+-- Taller resuelto en clase con ejercicios que fui pidiendo a una IA
+-- para practicar, en vez de quedarme solo con la teoria de como
+-- funciona cada tema.
 -- 01_sesion_A.sql        >>>  CONEXIÓN A  <<<
 -- =====================================================================
 -- #####################################################################

@@ -1,8 +1,9 @@
 -- ================================================================
 -- REPASO 2 - SQL AVANZADO
+-- Repaso con ejercicios que fui pidiendo a una IA para practicar,
+-- en vez de quedarme solo con la teoria de como funciona cada tema.
 -- CTE, analiticas, ranking, ventanas, jerarquias, MERGE, PIVOT,
 -- LISTAGG y subconsultas avanzadas.
--- Basado principalmente en nueva conexion6.sql.
 -- ================================================================
 
 -- 1. CTE SIMPLE
@@ -326,8 +327,51 @@ FROM hr.employees;
 
 -- ================================================================
 -- PRACTICA EXTRA
--- 1) Obtener el segundo salario distinto mas alto.
--- 2) Obtener los 2 empleados mejor pagados de cada departamento.
--- 3) Calcular diferencia entre salario y promedio del departamento.
--- 4) Mostrar clientes cuyo ultimo pedido supera su promedio historico.
+-- ================================================================
+
+-- 1) Segundo salario distinto mas alto.
+SELECT salary
+FROM (
+    SELECT DISTINCT salary
+    FROM hr.employees
+    ORDER BY salary DESC
+)
+WHERE ROWNUM = 1
+OFFSET 1 ROWS FETCH NEXT 1 ROWS ONLY;
+
+-- 2) Los 2 empleados mejor pagados de cada departamento.
+SELECT department_id, employee_id, first_name, salary
+FROM (
+    SELECT department_id, employee_id, first_name, salary,
+           ROW_NUMBER() OVER (
+             PARTITION BY department_id ORDER BY salary DESC
+           ) AS puesto
+    FROM hr.employees
+)
+WHERE puesto <= 2;
+
+-- 3) Diferencia entre salario y promedio del departamento.
+SELECT employee_id, first_name, department_id, salary,
+       ROUND(salary - AVG(salary) OVER (PARTITION BY department_id), 2)
+         AS diferencia_vs_promedio
+FROM hr.employees;
+
+-- 4) Clientes cuyo ultimo pedido supera su promedio historico.
+WITH pedidos_cliente AS (
+    SELECT c.id_cliente,
+           c.nombre,
+           p.id_pedido,
+           p.fecha_pedido,
+           p.total,
+           AVG(p.total) OVER (PARTITION BY c.id_cliente) AS promedio_historico,
+           ROW_NUMBER() OVER (
+             PARTITION BY c.id_cliente ORDER BY p.fecha_pedido DESC
+           ) AS rn
+    FROM cliente c
+    JOIN pedido p ON p.id_cliente = c.id_cliente
+)
+SELECT id_cliente, nombre, id_pedido, fecha_pedido, total, promedio_historico
+FROM pedidos_cliente
+WHERE rn = 1
+  AND total > promedio_historico;
 -- ================================================================
