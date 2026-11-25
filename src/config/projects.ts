@@ -14,12 +14,12 @@ export const projectsConfig = {
   ],
   projects: [
     {
-      title: "Proyecto Final BD2",
+      title: "Proyecto Final BD2 — MotoGo",
       description:
-        "Proyecto integrador del semestre: diseño e implementación de una solución de datos completa combinando bases de datos relacionales y NoSQL. Incluirá modelado, implementación, optimización y análisis comparativo aplicados a un caso real.",
-      technologies: ["MongoDB", "SQL", "NoSQL", "PL/SQL"],
-      liveLink: "#",
-      githubLink: "#",
+        "Sistema web para la gestión y alquiler flexible de motocicletas: MySQL con lógica de negocio en triggers, procedimientos y funciones, MongoDB para auditoría e historial de actividad, y despliegue en dos máquinas virtuales Lubuntu conectadas por Tailscale.",
+      technologies: ["MySQL", "MongoDB", "Spring Boot", "Lubuntu", "Scrum"],
+      liveLink: "/posts#proyecto",
+      githubLink: "https://github.com/DSGOMEZD/PROYECTO-BD2",
     },
     {
       title: "MongoDB — CRUD Completo",

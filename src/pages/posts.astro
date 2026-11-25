@@ -8,6 +8,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import SqlPreview from "../components/SqlPreview.astro";
 import PdfPreview from "../components/PdfPreview.astro";
+import DocCard from "../components/DocCard.astro";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
@@ -35,9 +36,70 @@ const optimizacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/OPTIM
 const indexacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/INDEXACION.sql");
 const tallerSql = sqlPreview("evidencias/bd2/05-talleres/SQL_completos.sql", 16);
 const tallerPdf = pdfInfo("evidencias/bd2/05-talleres/Taller_BD2_MercaAndes_Respuestas.pdf");
-const modeloPdf = pdfInfo("evidencias/bd2/08-proyecto/Modelo_de_datos_BD2.pdf");
-const motogoSistemaPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Sistema_Gestion_Alquiler_Motocicletas.pdf");
-const motogoSupuestosPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Supuestos_Desarrollo_Proyecto.pdf");
+// ── Proyecto final MotoGo ──────────────────────────────────
+const P = "evidencias/bd2/08-proyecto";
+const proyecto = {
+  github: "https://github.com/DSGOMEZD/PROYECTO-BD2",
+  videoId: "XST3REPmFmA",
+  zip: pdfInfo(`${P}/Entrega_Proyecto_BD2_MotoGo.zip`),
+  erImg: `/${P}/modelado/Modelo_Entidad_Relacion.jpg`,
+};
+
+const doc = (file: string, title: string, desc: string, icon: string) => ({
+  ...pdfInfo(`${P}/${file}`), title, desc, icon,
+});
+
+const grupos = [
+  {
+    nombre: "Gestión del proyecto",
+    accent: "#fb923c",
+    docs: [
+      doc("gestion/Propuesta_Proyecto.pdf", "Propuesta de proyecto", "Problema, objetivos, alcance y resultados esperados de la plataforma MotoGo.", "🎯"),
+      doc("gestion/Supuestos.pdf", "Supuestos", "Reglas de negocio, operativas y tecnológicas sobre las que se diseñó el sistema.", "📌"),
+      doc("gestion/Metodologia_Scrum.pdf", "Metodología — Scrum", "Justificación de Scrum, roles, eventos y planificación de sprints semanales.", "🔄"),
+      doc("gestion/Organizacion_Equipo.pdf", "Organización del equipo", "Roles, responsabilidades por capa y matriz RACI del equipo de tres integrantes.", "👥"),
+      doc("gestion/Gestion_Riesgos.pdf", "Gestión de riesgos", "Identificación, evaluación y plan de respuesta a los riesgos técnicos y del equipo.", "⚠️"),
+    ],
+  },
+  {
+    nombre: "Análisis técnico",
+    accent: "#38bdf8",
+    docs: [
+      doc("analisis/Analisis_Seleccion_RDBMS.pdf", "Selección del RDBMS", "Comparación ponderada de MySQL, PostgreSQL y MariaDB con seguridad como criterio principal.", "🗄️"),
+      doc("analisis/Analisis_Seleccion_SO.pdf", "Selección del sistema operativo", "Evaluación de distribuciones Linux para las máquinas virtuales de los motores.", "🐧"),
+    ],
+  },
+  {
+    nombre: "Modelado de datos",
+    accent: "#10b981",
+    docs: [
+      doc("modelado/Modelo_Relacional.pdf", "Modelo relacional", "Esquema relacional normalizado (3FN) de la base alquiler_motos.", "🔗"),
+      doc("modelado/Modelo_Reducido_Tablas.pdf", "Modelo reducido a tablas", "Transformación del modelo E-R a tablas, llaves primarias y foráneas.", "📋"),
+      doc("modelado/Diccionario_Datos.pdf", "Diccionario de datos", "Las 7 tablas y 67 columnas documentadas: tipos, restricciones y origen de cada llave.", "📖"),
+    ],
+  },
+  {
+    nombre: "Cierre",
+    accent: "#a78bfa",
+    docs: [
+      doc("informe/Informe_Ejecutivo_Final.pdf", "Informe ejecutivo final", "Resumen de lo realmente construido: arquitectura, despliegue, resultados y aprendizajes.", "🏁"),
+    ],
+  },
+];
+const totalDocs = grupos.reduce((n, g) => n + g.docs.length, 0);
+
+const fase1 = [
+  doc("fase-1/MotoGo_Sistema_Gestion_Alquiler_Motocicletas.pdf", "Sistema de gestión — Fase 1", "Planteamiento inicial del problema y objetivos del sistema.", "📝"),
+  doc("fase-1/MotoGo_Supuestos_Desarrollo_Proyecto.pdf", "Supuestos — Fase 1", "Primera versión de los supuestos del proyecto.", "📝"),
+  doc("fase-1/Modelo_de_datos_BD2.pdf", "Modelo de datos — Fase 1", "Primer modelo de datos, antes de los ajustes de la entrega final.", "📝"),
+];
+
+const stack = ["MySQL 8", "MongoDB 7", "Spring Boot", "Lubuntu", "VirtualBox", "Docker", "Tailscale VPN", "Scrum · Jira"];
+const equipo = [
+  { nombre: "David Santiago Gómez", rol: "Base de datos relacional · Scrum · Frontend" },
+  { nombre: "Gabriel Amórtegui", rol: "Backend e integración web" },
+  { nombre: "Daniel Nieto", rol: "MongoDB · Infraestructura Linux" },
+];
 ---
 
 <html lang="es">
@@ -210,20 +272,95 @@ const motogoSupuestosPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Supuestos_
             <button class="ev-hdr ev-hdr-proyecto">
               <span class="ev-badge ev-badge-proyecto">08</span>
               <span class="ev-ttl">Proyecto Final — MotoGo</span>
-              <span class="ev-count">3 PDF</span>
+              <span class="ev-count">Entrega final · {totalDocs} docs + video</span>
               <span class="ev-chevron ev-chevron-proyecto">▼</span>
             </button>
             <div class="ev-body">
-              <p class="ev-desc ev-desc-proyecto">
-                MotoGo: sistema para la gestión y alquiler flexible de motocicletas. Proyecto
-                integrador del semestre, combinando bases de datos relacionales y NoSQL. Por
-                ahora: el modelo de datos y los supuestos y alcance definidos para el desarrollo
-                del sistema. Faltan la implementación, optimización y el análisis comparativo
-                entre ambos paradigmas.
-              </p>
-              <PdfPreview title="Modelo de datos — BD2" url={modeloPdf.url} size={modeloPdf.size} />
-              <PdfPreview title="MotoGo — Sistema para la Gestión y Alquiler de Motocicletas" url={motogoSistemaPdf.url} size={motogoSistemaPdf.size} />
-              <PdfPreview title="MotoGo — Supuestos para el Desarrollo del Proyecto" url={motogoSupuestosPdf.url} size={motogoSupuestosPdf.size} />
+
+              <!-- Resumen + acciones -->
+              <div class="pj-hero">
+                <div class="pj-hero-text">
+                  <span class="pj-kicker">Proyecto integrador · Bases de Datos II</span>
+                  <h3 class="pj-name">MotoGo</h3>
+                  <p class="pj-tagline">
+                    Sistema web para la gestión y el alquiler flexible de motocicletas entre
+                    propietarios y repartidores. Combina una base relacional en <strong>MySQL</strong>
+                    (usuarios, motos, contratos y pagos con lógica en triggers, procedimientos y
+                    funciones) con <strong>MongoDB</strong> para la auditoría e historial de actividad,
+                    desplegadas en dos máquinas virtuales Linux conectadas por VPN.
+                  </p>
+                  <div class="pj-chips">
+                    {stack.map((t) => <span class="pj-chip">{t}</span>)}
+                  </div>
+                </div>
+                <div class="pj-actions">
+                  <a href={proyecto.github} target="_blank" rel="noopener" class="pj-btn pj-btn-gh">
+                    <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                    Ver código en GitHub
+                  </a>
+                  <a href={`https://youtu.be/${proyecto.videoId}`} target="_blank" rel="noopener" class="pj-btn pj-btn-yt">
+                    ▶ Video en YouTube
+                  </a>
+                  <a href={proyecto.zip.url} download class="pj-btn pj-btn-zip">
+                    ⬇ Descargar entrega (.zip · {proyecto.zip.size})
+                  </a>
+                </div>
+              </div>
+
+              <!-- Video demostrativo -->
+              <h4 class="pj-section">🎬 Video demostrativo</h4>
+              <div class="pj-video">
+                <iframe
+                  src={`https://www.youtube.com/embed/${proyecto.videoId}`}
+                  title="MotoGo — video demostrativo"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <!-- Equipo -->
+              <h4 class="pj-section">👥 Equipo</h4>
+              <div class="pj-team">
+                {equipo.map((m) => (
+                  <div class="pj-member">
+                    <span class="pj-avatar">{m.nombre.split(" ").filter((_, i, a) => i === 0 || i === a.length - 1).map((w) => w[0]).join("")}</span>
+                    <div>
+                      <strong>{m.nombre}</strong>
+                      <span>{m.rol}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Modelo E-R -->
+              <h4 class="pj-section">🧩 Modelo Entidad–Relación</h4>
+              <a href={proyecto.erImg} target="_blank" rel="noopener" class="pj-er">
+                <img src={proyecto.erImg} alt="Modelo entidad-relación de MotoGo" loading="lazy" />
+                <span class="pj-er-hint">Clic para ver en tamaño completo ↗</span>
+              </a>
+
+              <!-- Entregables por grupo -->
+              {grupos.map((g) => (
+                <div class="pj-group" style={`--accent:${g.accent}`}>
+                  <h4 class="pj-section pj-group-title">
+                    {g.nombre}
+                    <span class="pj-group-count">{g.docs.length}</span>
+                  </h4>
+                  <div class="pj-docs">
+                    {g.docs.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
+                  </div>
+                </div>
+              ))}
+
+              <!-- Versiones iniciales -->
+              <details class="pj-fase1" style="--accent:#64748b">
+                <summary>📁 Versiones iniciales — Fase 1 ({fase1.length} documentos)</summary>
+                <div class="pj-docs">
+                  {fase1.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
+                </div>
+              </details>
+
             </div>
           </section>
 
@@ -389,12 +526,215 @@ const motogoSupuestosPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Supuestos_
 .ev-chevron-proyecto { color: #fb923c; }
 .ev-desc-proyecto { border-left-color: #fb923c; }
 
+/* ── Proyecto: hero ──────────────────────────────────────── */
+.pj-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.4rem 1.5rem;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(251, 146, 60, 0.16), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.12), transparent 55%),
+    #1a2740;
+  border: 1px solid #2d4a64;
+}
+.pj-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fb923c;
+}
+.pj-name {
+  margin: 0.2rem 0 0.55rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f0f4f8;
+  letter-spacing: -0.02em;
+}
+.pj-tagline {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(248, 250, 252, 0.75);
+  max-width: 62ch;
+}
+.pj-tagline strong { color: #f0f4f8; }
+.pj-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pj-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  color: #cbd5e1;
+  background: #243447;
+  border: 1px solid #2d4a64;
+}
+.pj-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 230px;
+}
+.pj-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s, filter 0.2s, background 0.2s;
+}
+.pj-btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.pj-btn-gh { background: #f0f4f8; color: #0f172a; }
+.pj-btn-yt { background: #dc2626; color: #fff; }
+.pj-btn-zip {
+  color: #cbd5e1;
+  border: 1px solid #2d4a64;
+  background: #243447;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+/* ── Proyecto: subtítulos de bloque ──────────────────────── */
+.pj-section {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 2rem 0 0.9rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #f0f4f8;
+}
+.pj-group-title::before {
+  content: "";
+  width: 4px;
+  height: 1.1em;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.pj-group-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0.08rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+/* ── Proyecto: video ─────────────────────────────────────── */
+.pj-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2d4a64;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+.pj-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ── Proyecto: equipo ────────────────────────────────────── */
+.pj-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.75rem;
+}
+.pj-member {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 11px;
+  background: #1a2740;
+  border: 1px solid #2d4a64;
+}
+.pj-member strong { display: block; font-size: 0.92rem; color: #f0f4f8; }
+.pj-member span:not(.pj-avatar) { font-size: 0.78rem; color: rgba(248, 250, 252, 0.6); }
+.pj-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+  background: linear-gradient(135deg, #fb923c, #38bdf8);
+}
+
+/* ── Proyecto: modelo E-R ────────────────────────────────── */
+.pj-er {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2d4a64;
+  background: #fff;
+}
+.pj-er img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+.pj-er-hint {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 7px;
+  color: #f0f4f8;
+  background: rgba(15, 23, 42, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.pj-er:hover .pj-er-hint { opacity: 1; }
+
+/* ── Proyecto: grilla de documentos ──────────────────────── */
+.pj-docs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+.pj-fase1 {
+  margin-top: 2rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 11px;
+  border: 1px dashed #2d4a64;
+}
+.pj-fase1 summary {
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(248, 250, 252, 0.7);
+}
+.pj-fase1[open] summary { margin-bottom: 0.9rem; }
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {
   .ev-hdr  { padding: 0.9rem 1rem; gap: 0.6rem; }
   .ev-body { padding: 1rem; }
   .ev-ttl  { font-size: 0.97rem; }
   .ev-count { display: none; }
+  .pj-hero { grid-template-columns: 1fr; padding: 1.1rem; }
+  .pj-actions { min-width: 0; }
+  .pj-name { font-size: 1.6rem; }
 }
 </style>
 
@@ -410,5 +750,12 @@ const motogoSupuestosPdf = pdfInfo("evidencias/bd2/08-proyecto/MotoGo_Supuestos_
         btn.closest(".ev-card")?.classList.toggle("open");
       });
     });
+
+    // Abrir la tarjeta enlazada por #id (p. ej. /posts#proyecto)
+    const target = location.hash && document.querySelector(`.ev-card${location.hash}`);
+    if (target) {
+      target.classList.add("open");
+      setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+    }
   });
 </script>
