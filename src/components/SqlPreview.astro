@@ -6,6 +6,9 @@ interface Props {
   url: string;
 }
 const { label = "SQL", preview, totalLines, url } = Astro.props;
+// Los scripts completos viven en el repositorio: se enlazan en GitHub además de la descarga directa.
+const github = "https://github.com/DSGOMEZD/dsgomezd.github.io/blob/main/public" + url.split("/").map(encodeURIComponent).join("/");
+const ext = url.split(".").pop();
 ---
 
 <div class="sql-preview">
@@ -15,8 +18,8 @@ const { label = "SQL", preview, totalLines, url } = Astro.props;
   </div>
   <pre class="sql-block"><code>{preview}</code></pre>
   <div class="sql-actions">
-    <a href={url} target="_blank" rel="noopener" class="ev-link">Ver script completo ↗</a>
-    <a href={url} download class="ev-link ev-link-ghost">Descargar .sql</a>
+    <a href={github} target="_blank" rel="noopener" class="ev-link">Ver script completo en GitHub ↗</a>
+    <a href={url} download class="ev-link ev-link-ghost">Descargar .{ext}</a>
   </div>
 </div>
 

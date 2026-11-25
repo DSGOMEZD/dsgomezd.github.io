@@ -9,6 +9,7 @@ import Footer from "../components/Footer.astro";
 import SqlPreview from "../components/SqlPreview.astro";
 import PdfPreview from "../components/PdfPreview.astro";
 import DocCard from "../components/DocCard.astro";
+import Caso from "../components/Caso.astro";
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 
@@ -36,8 +37,51 @@ const optimizacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/OPTIM
 const indexacionSql = sqlPreview("evidencias/bd2/04-optimizacion-indices/INDEXACION.sql");
 const tallerSql = sqlPreview("evidencias/bd2/05-talleres/SQL_completos.sql", 16);
 const tallerPdf = pdfInfo("evidencias/bd2/05-talleres/Taller_BD2_MercaAndes_Respuestas.pdf");
+
+// Fragmento de un script (líneas desde..hasta, base 1): en el portafolio solo va el código
+// que explica una decisión; el script completo se enlaza en GitHub.
+function fragment(relPath: string, from: number, to: number) {
+  const all = fs.readFileSync(path.join(PUBLIC_DIR, relPath), "utf-8").split("\n");
+  return { preview: all.slice(from - 1, to).join("\n").trimEnd(), totalLines: all.length, url: "/" + relPath };
+}
+
+// Presentación de investigación (PDF) → tarjeta de documento
+const inv = (relPath: string, title: string, desc: string, icon = "🔎") => ({ ...pdfInfo(relPath), title, desc, icon });
+
+// ── 06 NoSQL y MongoDB ─────────────────────────────────────
+const M = "evidencias/bd2/06-nosql-mongodb";
+const mqlEsr = fragment(`${M}/taller-mql/taller_mql_mflix.js`, 195, 201);
+const mqlBucket = fragment(`${M}/taller-mql/documentos_ejemplo_domicilios.js`, 121, 142);
+const mqlPdf = pdfInfo(`${M}/taller-mql/Taller_MQL_Duran_Gomez.pdf`);
+const mqlZip = pdfInfo(`${M}/taller-mql/Entrega_Taller_MQL.zip`);
+const mqlEnunciado = pdfInfo(`${M}/Enunciado_Taller_MQL_Airbnb.pdf`);
+const optA = fragment(`${M}/sustentacion/opcion_A.js`, 29, 39);
+const optB = fragment(`${M}/sustentacion/opcion_B.js`, 24, 37);
+const invMongo = [
+  inv(`${M}/investigacion/patrones-y-antipatrones-de-esquema.pdf`, "Patrones y antipatrones de esquema", "Polymorphic, Outlier, Tree, Approximation y Archive (los que no usamos en el taller) y los errores de diseño más comunes.", "🧩"),
+  inv(`${M}/investigacion/consultas-geoespaciales-mongodb.pdf`, "Consultas geoespaciales", "GeoJSON, índices 2dsphere, $geoWithin, $geoIntersects y $geoNear, aplicado al caso de la sustentación.", "📍"),
+];
+
+// ── 07 PL/SQL ──────────────────────────────────────────────
+const L = "evidencias/bd2/07-plsql";
+const plsqlTrigger = fragment(`${L}/taller/TALLER_PLSQL_SOLUCION.sql`, 1579, 1616);
+const plsqlPdf = pdfInfo(`${L}/taller/Taller_PLSQL_Gomez_Herrera_Amortegui.pdf`);
+const plsqlZip = pdfInfo(`${L}/taller/Entrega_Taller_PLSQL.zip`);
+const invPlsql = [
+  inv(`${L}/investigacion/feedback-optimizador-y-clustering-factor.pdf`, "Feedback del optimizador y clustering factor", "Cómo el optimizador corrige sus estimaciones y por qué la dispersión física de los datos decide si usa un índice.", "🔁"),
+  inv(`${L}/investigacion/bulk-collect-y-forall.pdf`, "BULK COLLECT y FORALL", "Procesamiento masivo en PL/SQL: menos cambios de contexto entre el motor PL/SQL y el motor SQL.", "⚡"),
+  inv(`${L}/investigacion/sql-dinamico-e-inyeccion-sql.pdf`, "SQL dinámico e inyección SQL", "EXECUTE IMMEDIATE, variables bind y DBMS_ASSERT para construir sentencias en ejecución de forma segura.", "🛡️"),
+];
+
+// ── 08 ETL ─────────────────────────────────────────────────
+const E = "evidencias/bd2/08-etl";
+const invEtl = [
+  inv(`${E}/etl-y-elt-fundamentos.pdf`, "ETL y ELT: fundamentos", "Las tres fases, extracción completa vs incremental, ETL vs ELT y una propuesta de ETL para MotoGo.", "🔄"),
+  inv(`${E}/calidad-y-limpieza-de-datos.pdf`, "Calidad y limpieza de datos", "Dimensiones de calidad, deduplicación con ROW_NUMBER y registro de rechazos con DML Error Logging.", "🧹"),
+  inv(`${E}/bodega-de-datos-modelo-estrella-y-scd.pdf`, "Bodega de datos: modelo estrella y SCD", "Hechos y dimensiones, estrella vs copo de nieve y Slowly Changing Dimensions tipo 2.", "⭐"),
+];
 // ── Proyecto final MotoGo ──────────────────────────────────
-const P = "evidencias/bd2/08-proyecto";
+const P = "evidencias/bd2/09-proyecto";
 const proyecto = {
   github: "https://github.com/DSGOMEZD/PROYECTO-BD2",
   videoId: "XST3REPmFmA",
@@ -87,12 +131,6 @@ const grupos = [
   },
 ];
 const totalDocs = grupos.reduce((n, g) => n + g.docs.length, 0);
-
-const fase1 = [
-  doc("fase-1/MotoGo_Sistema_Gestion_Alquiler_Motocicletas.pdf", "Sistema de gestión — Fase 1", "Planteamiento inicial del problema y objetivos del sistema.", "📝"),
-  doc("fase-1/MotoGo_Supuestos_Desarrollo_Proyecto.pdf", "Supuestos — Fase 1", "Primera versión de los supuestos del proyecto.", "📝"),
-  doc("fase-1/Modelo_de_datos_BD2.pdf", "Modelo de datos — Fase 1", "Primer modelo de datos, antes de los ajustes de la entrega final.", "📝"),
-];
 
 const stack = ["MySQL 8", "MongoDB 7", "Spring Boot", "Lubuntu", "VirtualBox", "Docker", "Tailscale VPN", "Scrum · Jira"];
 const equipo = [
@@ -228,19 +266,75 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#34d399">
               <span class="ev-badge">06</span>
               <span class="ev-ttl">NoSQL y MongoDB</span>
-              <span class="ev-count">Próximamente</span>
+              <span class="ev-count">2 talleres · {invMongo.length} investigaciones</span>
               <span class="ev-chevron">▼</span>
             </button>
-            <div class="ev-body">
+            <div class="ev-body" style="--mc:#34d399">
               <p class="ev-desc">
-                Panorama general del ecosistema NoSQL (Teorema CAP, BASE vs ACID, tipos de bases
-                documentales, clave-valor, columnares y grafos) junto con MongoDB en la práctica:
-                CRUD completo sobre documentos BSON y pipelines de agregación ($match, $group,
-                $project, $lookup, $unwind). Se cubre hacia el final del semestre.
+                MongoDB en la práctica sobre los datasets de ejemplo de Atlas: consultas con
+                <code>find</code>, pipelines de agregación, escritura masiva, índices con la regla ESR
+                y modelado documental con patrones de diseño. Los scripts completos están en el
+                repositorio; aquí se resume qué se buscaba, cómo se resolvió y qué se aprendió.
               </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
+
+              <Caso
+                titulo="Taller MQL — consultas, agregación, índices y modelado"
+                meta="sample_mflix · Mariana Durán y Santiago Gómez"
+                contexto="Taller de 14 puntos sobre la colección de películas de sample_mflix, más una parte de modelado con dos casos: una plataforma de domicilios y el monitoreo IoT de la calidad del aire en Bogotá."
+                objetivo="Dominar find y aggregate sobre documentos con arreglos y objetos anidados, medir el efecto de un índice con explain() y diseñar esquemas justificando cada patrón documental."
+                solucion={[
+                  "Antes de promediar ratings se filtran los valores vacíos con <code>$type: \"number\"</code>, porque el campo mezcla números y cadenas.",
+                  "En el top de películas comentadas se agrupa y se limita a 10 <em>antes</em> del <code>$lookup</code>: la unión se hace 10 veces y no una por película.",
+                  "Índice compuesto siguiendo <strong>ESR</strong> (Equality → Sort → Range): <code>genres</code>, luego <code>imdb.rating</code> y al final <code>year</code>.",
+                  "Modelado con Extended Reference, Subset, Computed, Attribute, Bucket y Schema Versioning, cada uno con su costo y lo que pasaría sin él.",
+                ]}
+                resultados={[
+                  "Con el índice el plan ganador pasa de <code>COLLSCAN</code> a <code>IXSCAN</code> y baja mucho <code>totalDocsExamined</code>.",
+                  "El patrón Bucket reduce de 288.000 a 4.800 documentos diarios en el caso IoT (60 veces menos).",
+                  "Dos modelos completos en Hackolade con documentos de ejemplo e índices propuestos.",
+                ]}
+                aprendizajes={[
+                  "El orden de las etapas del pipeline cambia el costo tanto como un índice.",
+                  "En MongoDB el esquema se diseña desde las consultas, aceptando algo de duplicación.",
+                  "Guardar suma y conteo (no solo el promedio) permite combinar promedios sin error.",
+                ]}
+              >
+                <SqlPreview label="MQL · Índice ESR (punto 14)" preview={mqlEsr.preview} totalLines={mqlEsr.totalLines} url={mqlEsr.url} />
+                <SqlPreview label="Patrón Bucket · lecturas por hora" preview={mqlBucket.preview} totalLines={mqlBucket.totalLines} url={mqlBucket.url} />
+                <div class="ev-files">
+                  <PdfPreview title="Taller MQL — documento de entrega" url={mqlPdf.url} size={mqlPdf.size} />
+                  <a class="ev-file" href={mqlZip.url} download>⬇ Entrega completa con modelos Hackolade (.zip · {mqlZip.size})</a>
+                  <a class="ev-file" href={mqlEnunciado.url} target="_blank" rel="noopener">📄 Enunciado del taller MQL CRUD (sample_airbnb) ↗</a>
+                </div>
+              </Caso>
+
+              <Caso
+                titulo="Sustentación — restaurantes por barrio (opción A y opción B)"
+                meta="sample_restaurants · Mariana Durán y Santiago Gómez"
+                contexto="En la sustentación se pidieron tres consultas: restaurantes de Manhattan con calificación A, cantidad de restaurantes por barrio y el top 5 de barrios. Los restaurantes solo tienen un punto y los barrios un polígono GeoJSON, así que no existe un campo “barrio” para agrupar."
+                objetivo="Relacionar dos colecciones por ubicación: un restaurante pertenece a un barrio si su punto cae dentro del polígono ($geoWithin). Se resolvió de dos maneras para comparar."
+                solucion={[
+                  "<strong>Opción A</strong>: por cada barrio se ejecuta <code>countDocuments</code> con <code>$geoWithin</code> y el resultado se ordena en JavaScript. No crea nada nuevo, pero repite todas las consultas para el punto 2 y para el 3.",
+                  "<strong>Opción B</strong>: se recorre los barrios una sola vez y con <code>$merge</code> se guarda cada restaurante con su barrio en <code>restaurantes_por_barrio</code>. Después los puntos 2 y 3 son un <code>$group</code> normal.",
+                  "<code>grades.0</code> se usa como la calificación más reciente para el punto 1.",
+                ]}
+                resultados={[
+                  "Las tres consultas quedaron resueltas con las dos estrategias.",
+                  "B paga el costo geoespacial una vez; A lo paga en cada consulta.",
+                ]}
+                aprendizajes={[
+                  "<code>$merge</code> sin <code>on</code> une por <code>_id</code>: si un restaurante cayera en dos polígonos, en B quedaría solo con el último barrio, mientras que A lo contaría en ambos.",
+                  "Es la misma decisión que una vista frente a una vista materializada en SQL: espacio a cambio de tiempo.",
+                  "Una colección materializada hay que borrarla o refrescarla cuando cambian los datos.",
+                ]}
+              >
+                <SqlPreview label="Opción A · contar en el cliente" preview={optA.preview} totalLines={optA.totalLines} url={optA.url} />
+                <SqlPreview label="Opción B · materializar con $merge" preview={optB.preview} totalLines={optB.totalLines} url={optB.url} />
+              </Caso>
+
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <div class="pj-docs">
+                {invMongo.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
               </div>
             </div>
           </section>
@@ -250,27 +344,78 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#facc15">
               <span class="ev-badge">07</span>
               <span class="ev-ttl">PL/SQL y Programación de Bases de Datos</span>
-              <span class="ev-count">Próximamente</span>
+              <span class="ev-count">1 taller · {invPlsql.length} investigaciones</span>
               <span class="ev-chevron">▼</span>
             </button>
-            <div class="ev-body">
+            <div class="ev-body" style="--mc:#facc15">
               <p class="ev-desc">
-                Programación procedural dentro del motor de base de datos: bloques PL/SQL
-                anónimos, stored procedures con parámetros IN/OUT/IN-OUT, funciones almacenadas,
-                cursores explícitos e implícitos, triggers BEFORE/AFTER para auditoría y
-                validación, manejo de excepciones y organización en paquetes. Implementación en Oracle.
+                Programación procedural dentro de Oracle: procedimientos, funciones, cursores,
+                excepciones, disparadores y paquetes sobre un esquema de inventario y ventas.
+                Cada objeto se entregó con su justificación de diseño y su análisis ante
+                concurrencia, volumen y error.
               </p>
-              <div class="placeholder-msg">
-                <span class="placeholder-icon">📂</span>
-                <p>Contenido próximamente — las evidencias se agregarán durante el semestre.</p>
+
+              <Caso
+                titulo="Taller PL/SQL — inventario y ventas"
+                meta="Oracle · Grupo 3: Santiago Gómez, Gabriel Amórtegui, David Herrera"
+                contexto="Taller de 6 partes (50 puntos) sobre un esquema de productos, clientes, pedidos y movimientos de stock. La calificación pesaba tanto la justificación (40 %) como que el código funcionara (40 %)."
+                objetivo="Llevar las reglas de negocio al motor: registrar productos, ajustar stock, crear y facturar pedidos, validar cupo de crédito y mantener totales y auditoría con disparadores."
+                solucion={[
+                  "El stock se lee con <code>SELECT ... FOR UPDATE</code> para que dos ajustes simultáneos no pisen el mismo saldo.",
+                  "<code>SP_REGISTRAR_ERROR</code> usa <code>PRAGMA AUTONOMOUS_TRANSACTION</code>: el log de errores persiste aunque la operación principal haga ROLLBACK.",
+                  "El total del pedido se recalcula con un <strong>COMPOUND TRIGGER</strong>: el primer intento con trigger de fila produjo ORA-04091 (tabla mutante).",
+                  "Un trigger <code>INSTEAD OF</code> permite actualizar precio y stock mínimo a través de una vista que no es actualizable.",
+                  "<code>PKG_VENTAS.SP_FACTURAR_PEDIDO</code> reutiliza las funciones anteriores, usa SAVEPOINT y deja el COMMIT al llamador.",
+                ]}
+                resultados={[
+                  "Objetos compilados y probados: 7 procedimientos, 4 funciones, 6 disparadores y un paquete.",
+                  "Cada objeto con código de prueba y su justificación en el mismo script.",
+                ]}
+                aprendizajes={[
+                  "Un trigger de fila no puede consultar la tabla que está modificando; el compound trigger separa “anotar” de “recalcular”.",
+                  "Dónde va el COMMIT es una decisión de diseño: dentro del paquete quitaría el control al que lo llama.",
+                  "Los bloqueos (FOR UPDATE) se deciden pensando en dos usuarios a la vez, no en uno.",
+                ]}
+              >
+                <SqlPreview label="PL/SQL · Compound trigger contra la tabla mutante" preview={plsqlTrigger.preview} totalLines={plsqlTrigger.totalLines} url={plsqlTrigger.url} />
+                <div class="ev-files">
+                  <PdfPreview title="Taller PL/SQL — documento de entrega" url={plsqlPdf.url} size={plsqlPdf.size} />
+                  <a class="ev-file" href={plsqlZip.url} download>⬇ Entrega completa (.zip · {plsqlZip.size})</a>
+                </div>
+              </Caso>
+
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <div class="pj-docs">
+                {invPlsql.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
               </div>
             </div>
           </section>
 
-          <!-- ══ 08 PROYECTO FINAL BD2 ═════════════════════════ -->
+          <!-- ══ 08 ETL ═════════════════════════════════════════ -->
+          <section class="ev-card" id="etl">
+            <button class="ev-hdr" style="--mc:#2dd4bf">
+              <span class="ev-badge">08</span>
+              <span class="ev-ttl">ETL — Extracción, Transformación y Carga</span>
+              <span class="ev-count">{invEtl.length} investigaciones</span>
+              <span class="ev-chevron">▼</span>
+            </button>
+            <div class="ev-body" style="--mc:#2dd4bf">
+              <p class="ev-desc">
+                Tema trabajado como investigación: cómo se mueven los datos desde las bases que
+                operan el negocio hasta una bodega pensada para analizar. Cada presentación conecta
+                el tema con lo visto en clase (MERGE, funciones de ventana, <code>$merge</code> de
+                MongoDB) y con una propuesta aplicada al proyecto MotoGo.
+              </p>
+              <div class="pj-docs">
+                {invEtl.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ 09 PROYECTO FINAL BD2 ═════════════════════════ -->
           <section class="ev-card ev-card-proyecto" id="proyecto">
             <button class="ev-hdr ev-hdr-proyecto">
-              <span class="ev-badge ev-badge-proyecto">08</span>
+              <span class="ev-badge ev-badge-proyecto">09</span>
               <span class="ev-ttl">Proyecto Final — MotoGo</span>
               <span class="ev-count">Entrega final · {totalDocs} docs + video</span>
               <span class="ev-chevron ev-chevron-proyecto">▼</span>
@@ -352,14 +497,6 @@ const equipo = [
                   </div>
                 </div>
               ))}
-
-              <!-- Versiones iniciales -->
-              <details class="pj-fase1" style="--accent:#64748b">
-                <summary>📁 Versiones iniciales — Fase 1 ({fase1.length} documentos)</summary>
-                <div class="pj-docs">
-                  {fase1.map((d) => <DocCard title={d.title} desc={d.desc} url={d.url} size={d.size} icon={d.icon} />)}
-                </div>
-              </details>
 
             </div>
           </section>
@@ -487,6 +624,42 @@ const equipo = [
   border-radius: 9px;
   border-left: 3px solid var(--mc, #10b981);
   max-width: 100%;
+}
+
+.ev-desc code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: #a7f3d0;
+}
+
+/* ── Talleres e investigación (06–08) ────────────────────── */
+.ev-files {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.ev-file {
+  align-self: flex-start;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #2d4a64;
+  background: #243447;
+  transition: border-color 0.2s, background 0.2s;
+}
+.ev-file:hover { border-color: var(--mc, #10b981); background: #2a3d55; }
+.inv-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.6rem 0 0.9rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #f0f4f8;
 }
 
 /* ── Placeholder ─────────────────────────────────────────── */
@@ -712,19 +885,6 @@ const equipo = [
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 0.8rem;
 }
-.pj-fase1 {
-  margin-top: 2rem;
-  padding: 0.9rem 1.1rem;
-  border-radius: 11px;
-  border: 1px dashed #2d4a64;
-}
-.pj-fase1 summary {
-  cursor: pointer;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: rgba(248, 250, 252, 0.7);
-}
-.pj-fase1[open] summary { margin-bottom: 0.9rem; }
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {

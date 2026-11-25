@@ -1,0 +1,89 @@
+---
+// Ficha de un taller: contexto, objetivo, aspectos de la solución, resultados y aprendizajes.
+// El código completo vive en GitHub; aquí solo va el fragmento que explica la decisión (slot).
+interface Props {
+  titulo: string;
+  meta?: string;
+  contexto: string;
+  objetivo: string;
+  solucion: string[];
+  resultados: string[];
+  aprendizajes: string[];
+}
+const { titulo, meta, contexto, objetivo, solucion, resultados, aprendizajes } = Astro.props;
+---
+
+<article class="caso">
+  <header class="caso-hdr">
+    <h4>{titulo}</h4>
+    {meta && <span class="caso-meta">{meta}</span>}
+  </header>
+
+  <div class="caso-grid">
+    <div class="caso-blk"><h5>🧭 Contexto</h5><p>{contexto}</p></div>
+    <div class="caso-blk"><h5>🎯 Objetivo</h5><p>{objetivo}</p></div>
+  </div>
+
+  <div class="caso-blk">
+    <h5>🛠️ Aspectos relevantes de la solución</h5>
+    <ul>{solucion.map((s) => <li set:html={s} />)}</ul>
+  </div>
+
+  <slot />
+
+  <div class="caso-grid">
+    <div class="caso-blk"><h5>📊 Resultados</h5><ul>{resultados.map((s) => <li set:html={s} />)}</ul></div>
+    <div class="caso-blk"><h5>💡 Aprendizajes</h5><ul>{aprendizajes.map((s) => <li set:html={s} />)}</ul></div>
+  </div>
+</article>
+
+<style>
+  .caso {
+    border: 1px solid #2d4a64;
+    border-radius: 12px;
+    background: #1a2740;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.2rem;
+  }
+  .caso-hdr {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.9rem;
+  }
+  .caso-hdr h4 { margin: 0; font-size: 1.05rem; color: #f0f4f8; }
+  .caso-meta { font-size: 0.76rem; color: #64748b; }
+  .caso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+  }
+  .caso-blk { margin-bottom: 0.9rem; }
+  .caso-blk h5 {
+    margin: 0 0 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--mc, #10b981);
+  }
+  .caso-blk p, .caso-blk li {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(248, 250, 252, 0.75);
+    max-width: none;
+  }
+  .caso-blk p { margin: 0; }
+  .caso-blk ul { margin: 0; padding-left: 1.1rem; }
+  .caso-blk li { margin-bottom: 0.3rem; }
+  .caso-blk :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.82em;
+    padding: 0.05rem 0.35rem;
+    border-radius: 5px;
+    background: #0f1c2e;
+    color: #a7f3d0;
+  }
+</style>
