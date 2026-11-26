@@ -5,6 +5,7 @@ import mongoGeo from "./mongo-geo.mjs";
 import etlFundamentos from "./etl-fundamentos.mjs";
 import etlCalidad from "./etl-calidad.mjs";
 import etlDw from "./etl-dw.mjs";
+import cortas from "./cortas.mjs";
 
 // Versión corta: de cada deck solo se publican estas diapositivas (índices).
 // El resto del contenido queda en el archivo por si se quiere ampliar luego.
@@ -18,4 +19,5 @@ export default [
   corta(etlFundamentos, [0, 2, 3, 6, 8, 10, 11]),
   corta(etlCalidad, [0, 2, 4, 5, 6, 9, 10]),
   corta(etlDw, [0, 2, 4, 7, 8, 10, 11]),
+  ...cortas,
 ];

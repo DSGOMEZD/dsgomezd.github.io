@@ -48,6 +48,12 @@ function fragment(relPath: string, from: number, to: number) {
 // Presentación de investigación (PDF) → tarjeta de documento
 const inv = (relPath: string, title: string, desc: string, icon = "🔎") => ({ ...pdfInfo(relPath), title, desc, icon });
 
+// ── 01–04: una investigación corta por sección ──────────────
+const invRepaso = inv("evidencias/bd2/01-repaso-sql/orden-logico-de-una-consulta-sql.pdf", "El orden lógico de una consulta SQL", "Por qué FROM se procesa antes que SELECT y qué errores comunes explica eso.", "🔢");
+const invVentana = inv("evidencias/bd2/02-sql-avanzado/funciones-de-ventana-rows-vs-range.pdf", "Funciones de ventana: ROWS vs RANGE", "El marco de la ventana y por qué un acumulado con empates no va fila a fila.", "🪟");
+const invMvcc = inv("evidencias/bd2/03-transacciones/mvcc-y-consistencia-de-lectura.pdf", "MVCC y consistencia de lectura", "Cómo Oracle usa el undo para que leer no bloquee escribir, y el error ORA-01555.", "🕰️");
+const invBitmap = inv("evidencias/bd2/04-optimizacion-indices/indices-btree-vs-bitmap.pdf", "Índices B-tree vs bitmap", "Qué estructura conviene según la cantidad de valores distintos y el tipo de sistema.", "🌳");
+
 // ── 06 NoSQL y MongoDB ─────────────────────────────────────
 const M = "evidencias/bd2/06-nosql-mongodb";
 const mqlEsr = fragment(`${M}/taller-mql/taller_mql_mflix.js`, 195, 201);
@@ -157,7 +163,7 @@ const equipo = [
 
         <div class="posts-header posts-header-animate">
           <h1 class="posts-title">Contenido BD II</h1>
-          <p class="posts-subtitle">Bases de Datos II · Universidad del Bosque · 2025-2</p>
+          <p class="posts-subtitle">Bases de Datos II · Universidad del Bosque · 2026-2</p>
         </div>
 
         <div class="ev-grid posts-content-animate">
@@ -167,7 +173,7 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#10b981">
               <span class="ev-badge">01</span>
               <span class="ev-ttl">Repaso SQL</span>
-              <span class="ev-count">1 script SQL</span>
+              <span class="ev-count">1 script SQL · 1 investigación</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
@@ -178,6 +184,8 @@ const equipo = [
                 EXISTS/IN, operadores de conjuntos (UNION, INTERSECT, MINUS) y vistas.
               </p>
               <SqlPreview preview={repasoSql.preview} totalLines={repasoSql.totalLines} url={repasoSql.url} />
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <DocCard title={invRepaso.title} desc={invRepaso.desc} url={invRepaso.url} size={invRepaso.size} icon={invRepaso.icon} />
             </div>
           </section>
 
@@ -186,7 +194,7 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#38bdf8">
               <span class="ev-badge">02</span>
               <span class="ev-ttl">SQL Avanzado</span>
-              <span class="ev-count">1 script SQL</span>
+              <span class="ev-count">1 script SQL · 1 investigación</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
@@ -198,6 +206,8 @@ const equipo = [
                 frente a funciones analíticas.
               </p>
               <SqlPreview preview={avanzadoSql.preview} totalLines={avanzadoSql.totalLines} url={avanzadoSql.url} />
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <DocCard title={invVentana.title} desc={invVentana.desc} url={invVentana.url} size={invVentana.size} icon={invVentana.icon} />
             </div>
           </section>
 
@@ -206,7 +216,7 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#f472b6">
               <span class="ev-badge">03</span>
               <span class="ev-ttl">Transacciones</span>
-              <span class="ev-count">1 script SQL</span>
+              <span class="ev-count">1 script SQL · 1 investigación</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
@@ -217,6 +227,8 @@ const equipo = [
                 y deadlocks usando dos sesiones simultáneas.
               </p>
               <SqlPreview preview={transaccionesSql.preview} totalLines={transaccionesSql.totalLines} url={transaccionesSql.url} />
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <DocCard title={invMvcc.title} desc={invMvcc.desc} url={invMvcc.url} size={invMvcc.size} icon={invMvcc.icon} />
             </div>
           </section>
 
@@ -225,7 +237,7 @@ const equipo = [
             <button class="ev-hdr" style="--mc:#fb923c">
               <span class="ev-badge">04</span>
               <span class="ev-ttl">Optimización e Indexación de Consultas</span>
-              <span class="ev-count">2 scripts SQL</span>
+              <span class="ev-count">2 scripts SQL · 1 investigación</span>
               <span class="ev-chevron">▼</span>
             </button>
             <div class="ev-body">
@@ -238,6 +250,8 @@ const equipo = [
               </p>
               <SqlPreview label="SQL · Optimización" preview={optimizacionSql.preview} totalLines={optimizacionSql.totalLines} url={optimizacionSql.url} />
               <SqlPreview label="SQL · Indexación" preview={indexacionSql.preview} totalLines={indexacionSql.totalLines} url={indexacionSql.url} />
+              <h4 class="inv-title">🔎 Investigación</h4>
+              <DocCard title={invBitmap.title} desc={invBitmap.desc} url={invBitmap.url} size={invBitmap.size} icon={invBitmap.icon} />
             </div>
           </section>
 
